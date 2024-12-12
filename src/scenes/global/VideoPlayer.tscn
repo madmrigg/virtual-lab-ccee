@@ -1,0 +1,195 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/scripts/functions/video_player_layer.gd" type="Script" id=1]
+[ext_resource path="res://src/scripts/functions/video_player.gd" type="Script" id=2]
+[ext_resource path="res://src/videos/The Common Types Of Steel Connections.webm" type="VideoStream" id=3]
+[ext_resource path="res://src/ui_elements/icons/volume_off_FILL0_wght400_GRAD200_opsz48.png" type="Texture" id=4]
+[ext_resource path="res://src/ui_elements/icons/restart_alt_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=5]
+[ext_resource path="res://src/ui_elements/icons/play_arrow_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=6]
+[ext_resource path="res://src/ui_elements/icons/fullscreen_exit_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=7]
+[ext_resource path="res://src/ui_elements/icons/close_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=7]
+resource_name = "HideVideoPlayer"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VideoPlayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VideoPlayer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("VideoPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "stop"
+} ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("VideoPlayer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VideoPlayer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "ShowVideoPlayer"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("VideoPlayer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("VideoPlayer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("VideoPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play"
+} ]
+}
+
+[node name="VideoPlayerLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VideoPlayer"]
+root_node = NodePath("../..")
+autoplay = "RESET"
+anims/HideVideoPlayer = SubResource( 7 )
+anims/RESET = SubResource( 5 )
+anims/ShowVideoPlayer = SubResource( 6 )
+
+[node name="UI" type="HBoxContainer" parent="VideoPlayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -54.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Hide" type="Button" parent="VideoPlayer/UI"]
+margin_right = 60.0
+margin_bottom = 54.0
+icon = ExtResource( 8 )
+
+[node name="Loop" type="Button" parent="VideoPlayer/UI"]
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 54.0
+icon = ExtResource( 5 )
+
+[node name="1" type="MarginContainer" parent="VideoPlayer/UI"]
+margin_left = 128.0
+margin_right = 926.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+
+[node name="MuteUnmute" type="Button" parent="VideoPlayer/UI"]
+margin_left = 930.0
+margin_right = 990.0
+margin_bottom = 54.0
+icon = ExtResource( 4 )
+
+[node name="PlayPause" type="Button" parent="VideoPlayer/UI"]
+margin_left = 994.0
+margin_right = 1054.0
+margin_bottom = 54.0
+icon = ExtResource( 6 )
+
+[node name="2" type="MarginContainer" parent="VideoPlayer/UI"]
+margin_left = 1058.0
+margin_right = 1856.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+
+[node name="FullScreen" type="Button" parent="VideoPlayer/UI"]
+margin_left = 1860.0
+margin_right = 1920.0
+margin_bottom = 54.0
+icon = ExtResource( 7 )
+
+[connection signal="finished" from="VideoPlayer" to="VideoPlayer" method="_on_VideoPlayer_finished"]
+[connection signal="button_up" from="VideoPlayer/UI/Hide" to="VideoPlayer" method="_on_Hide_button_up"]
+[connection signal="button_up" from="VideoPlayer/UI/Loop" to="VideoPlayer" method="_on_Loop_button_up"]
+[connection signal="button_up" from="VideoPlayer/UI/MuteUnmute" to="VideoPlayer" method="_on_MuteUnmute_button_up"]
+[connection signal="button_up" from="VideoPlayer/UI/PlayPause" to="VideoPlayer" method="_on_PlayPause_button_up"]
+[connection signal="button_up" from="VideoPlayer/UI/FullScreen" to="VideoPlayer" method="_on_FullScreen_button_up"]

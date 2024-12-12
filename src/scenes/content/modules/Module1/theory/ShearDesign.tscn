@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/function/AnimatedPopUp.tscn" type="PackedScene" id=1]
+
+[node name="SteelDesign" instance=ExtResource( 1 )]
+visible = false
+margin_right = 24.0
+margin_bottom = -256.0
+
+[node name="AnimatedRTLabel" parent="." index="1"]
+margin_left = -1162.5
+margin_top = -138.0
+margin_right = 1162.5
+margin_bottom = 138.0
+bbcode_enabled = true
+bbcode_text = "[center]Shear forces are another important consideration in beam design. Steel beams may experience shear forces due to applied loads, which can cause shear failure if not properly accounted for. Design provisions include determining the maximum shear force and selecting an appropriate beam shape and size to resist shear stresses within acceptable limits.[/center]"
+text = "Shear forces are another important consideration in beam design. Steel beams may experience shear forces due to applied loads, which can cause shear failure if not properly accounted for. Design provisions include determining the maximum shear force and selecting an appropriate beam shape and size to resist shear stresses within acceptable limits."
+
+[node name="AutoNarrator" parent="." index="2"]
+margin_right = 2329.0
+margin_bottom = 280.0
+text = "Shear forces are another important consideration in beam design. Steel beams may experience shear forces due to applied loads, which can cause shear failure if not properly accounted for. Design provisions include determining the maximum shear force and selecting an appropriate beam shape and size to resist shear stresses within acceptable limits."

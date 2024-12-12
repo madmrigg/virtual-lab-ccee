@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/scenes/FooterBar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/TitleBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/ui_elements/themes/vlab_theme_light/vlab.tres" type="Theme" id=19]
+[ext_resource path="res://src/scripts/functions/set_view_panel.gd" type="Script" id=26]
+[ext_resource path="res://src/scenes/content/Home.tscn" type="PackedScene" id=28]
+
+[node name="CME450" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 19 )
+
+[node name="BG" type="Panel" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleBar" parent="Control/VBoxContainer" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 1920.0
+margin_bottom = 80.0
+
+[node name="ViewPanel" type="PanelContainer" parent="Control/VBoxContainer"]
+margin_top = 84.0
+margin_right = 1920.0
+margin_bottom = 996.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 26 )
+
+[node name="Home" parent="Control/VBoxContainer/ViewPanel" instance=ExtResource( 28 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 1912.0
+margin_bottom = 904.0
+
+[node name="FooterBar" parent="Control/VBoxContainer" instance=ExtResource( 1 )]
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 1000.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+root_node_path = NodePath("../..")

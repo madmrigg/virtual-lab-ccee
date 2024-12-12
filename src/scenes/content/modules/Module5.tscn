@@ -1,0 +1,159 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module5" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Enable students to learn and understand the field erection processes of steel members, reflecting on industry practices and experiencing real-life field erection scenario."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Introduction to steel members’ field erection processes and safety precautions
+
+The field erection processes of steel members play a crucial role in the construction of steel structures. These processes involve the on-site installation of steel members into a frame, lifting and positioning them, and finally joining them together. However, it is essential to prioritize safety throughout the entire erection process to ensure the well-being of workers and the overall stability of the structure.
+
+To ensure a safe working environment, workers involved in field erection should receive proper training that covers safety protocols, equipment operation, and hazard awareness. Adhering to safety regulations and guidelines is of utmost importance. This includes the use of appropriate personal protective equipment (PPE) and regular inspections of equipment and scaffolding to identify and address any potential hazards.
+
+Planning and sequencing the erection of steel members
+
+Efficient planning and sequencing are crucial for a smooth and successful erection process. The sequence and methods of erection largely depend on the layout and arrangement of the structural components.
+
+During the planning phase, it is important to ensure that the foundations are suitable and safe before commencing the erection process. This involves thorough checks of the sizes and exact locations of holding down bolts on the foundation and base plates to avoid any discrepancies. The alignment of columns on the baseplate is another critical step, ensuring they are straight and plumb.
+
+Temporary bracings are used to keep the columns in their vertical position and prevent swaying during the erection process. This helps maintain stability and ensures the safety of workers involved.
+
+When considering the types of bolts used in steel structures, there are several options to choose from. Some of the common types include:
+
+i-	Structural Bolts: These bolts are used in high load-bearing applications where a secure and robust connection is needed. They are designed to withstand high tensile and shear forces and offer excellent resistance to vibrations. Structural bolts typically come with a flat washer and a nut, and their heads are usually hexagonal or circular.
+
+ii-	Anchor Bolts: Anchor bolts are specifically used to connect steel structures to concrete foundations. These bolts are usually embedded in the concrete and have a threaded end that protrudes above the surface. Anchor bolts come in various grades, sizes, and materials and are designed to resist shear and tensile forces.
+
+iii-	A325 Bolts: A325 bolts are high-strength structural bolts commonly used in heavy construction projects. Made from medium carbon steel, these bolts are heat-treated to provide high tensile strength. A325 bolts have a built-in washer, eliminating the need for a separate nut.
+
+iv-	A490 Bolts: Similar to A325 bolts in strength, A490 bolts are made from a higher grade of steel. They are commonly used in heavy-duty applications such as bridges, water towers, and high-rise buildings. A490 bolts come in Type 1 and Type 3, with Type 3 bolts having a weathering steel coating.
+
+v-	A307 Bolts: A307 bolts are preferred for industrial-strength fastening needs. Made from carbon steel, they are designed to withstand high tension and stress levels. A307 bolts are versatile and adaptable, available in various sizes and finishes.
+
+vi-	Eye Bolts: Eye bolts have a looped end and are used to attach cables, wires, or chains to a steel structure. They are commonly used in lifting and rigging applications and come in various sizes and materials. The looped end of the bolt can be forged or welded depending on the specific application.
+
+Assembly and lifting of steel members
+
+The assembly and lifting of steel members require appropriate equipment and techniques. Cranes, such as mobile and non-mobile truck-mounted cranes, crawler cranes, all-terrain cranes, and tower cranes, are commonly used for lifting operations.
+
+To optimize efficiency, preassembled units should be used whenever possible to minimize the number of crane lifts required. In cases where crane availability is limited, steel decking, which can be installed by hand, is a preferable option over precast concrete units that require a crane for individual placement.
+
+When lifting and positioning steel members, it is important to consider the type of bolts used for their connections. The appropriate bolts must be selected based on the specific application and load-bearing requirements of the structure. The correct use of structural bolts, anchor bolts, or specialized bolts like A325 or A490 bolts ensures a secure and robust connection, enhancing the overall strength and stability of the steel structure.
+
+Alignment, leveling, and connection verification techniques
+
+Accurate alignment, leveling, and connection verification are essential to ensure the structural integrity and stability of the erected steel members. Collaboration between the site engineer and the erection crew is crucial during this stage.
+
+Alignment and plumbing involve the use of survey instruments by the site engineer to guide the erection crew in tightening and shimming the last bolts. Wedges, jacks, and proprietary pulling devices are employed to persuade the frame into the desired position acceptable to the checking engineer. Some degree of misalignment may occur during this process, and local adjustments are made to rectify any unfavorable deviations.
+
+When it comes to connection verification, bolted connections are preferred over welded connections due to their speed, weather resistance, and ease of inspection. Fully threaded bolts are commonly specified, providing versatility as one bolt size can be used for a wide range of connections. It is advisable to use bolts, nuts, and washers with corrosion-resistant coatings that do not require further protection on-site. Proper selection and installation of bolts and associated components ensure the strength and durability of the connections.
+
+Troubleshooting common challenges during field erection
+
+Field erection of steel members can present several challenges that need to be effectively addressed. Misalignment, adverse weather conditions, access restrictions, and inspection requirements are among the common challenges encountered.
+
+Misalignment issues can be overcome through the use of wedges, jacks, and pulling devices to persuade the frame into an acceptable position. Proper alignment techniques, including the use of survey instruments, ensure that the steel members are correctly positioned and level.
+
+Adverse weather conditions can pose challenges during the erection process, particularly for site welding. It is necessary to provide cover from bad weather and ensure good access for both welding and inspection. Planning and scheduling should consider weather forecasts to minimize weather-related delays and to ensure the safety of workers.
+
+Regular inspections and adjustments throughout the erection process help identify and address any issues promptly, ensuring the overall success of the field erection. Adherence to inspection requirements and quality control protocols is essential to maintain the structural integrity and safety of the erected steel members.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+visible = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 450.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 454.0
+margin_right = 1009.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 555.0
+margin_bottom = 107.0
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 111.0
+margin_right = 555.0
+margin_bottom = 218.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/9wUSHKIGOYM"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 222.0
+margin_right = 555.0
+margin_bottom = 329.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/IjoDeSPpzYo"
+
+[node name="WebLinkOpener3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="3" instance=ExtResource( 1 )]
+margin_top = 333.0
+margin_right = 555.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/PorCp4mslcI"
+
+[node name="WebLinkOpener4" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="4" instance=ExtResource( 1 )]
+margin_top = 444.0
+margin_right = 555.0
+margin_bottom = 551.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/dxBZcWHtj18"
+
+[node name="WebLinkOpener5" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="5" instance=ExtResource( 1 )]
+margin_top = 555.0
+margin_right = 555.0
+margin_bottom = 662.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/PLKLZStQ8hY"
+
+[node name="WebLinkOpener6" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="6" instance=ExtResource( 1 )]
+margin_top = 666.0
+margin_right = 555.0
+margin_bottom = 773.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/-OlJmYH7JqI"
+
+[node name="WebLinkOpener7" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="7" instance=ExtResource( 1 )]
+margin_top = 777.0
+margin_right = 555.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/C4Mm3mvN1P0"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 1013.0

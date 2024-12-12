@@ -1,0 +1,172 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module6" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Develop students' understanding and skills in making field connections between steel members and other structural elements, replicating industry practices for load transfer, and compatibility, while addressing common challenges encountered in the field."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Understanding the connection requirements between steel and other materials (e.g. concrete)
+
+The connection between steel members and concrete elements requires careful consideration of various factors. It is essential to understand the requirements for establishing a strong and reliable connection. Here are the key points in this subsection:
+
+Applications:
+The connection between steel and concrete can be made in various scenarios, including:
+
+a.	Steel Column to Existing Concrete Foundation: This application involves connecting new steel columns to existing concrete pads, strips, or pile caps. It is commonly used when adding new columns to an existing structure. The connection ensures proper load transfer and stability.
+
+b.	Steel Column to New Concrete Foundation: This application focuses on connecting new steel columns to newly constructed concrete foundations. It is used when erecting new structures or adding columns to support additional loads. The connection needs to be strong and stable to ensure the structural integrity of the building.
+
+c.	Steel Beam to Existing Concrete Beam/Wall: This scenario involves connecting steel beams to existing concrete beams or walls. It is often encountered during renovations or expansions. The connection must provide sufficient strength and ensure load transfer between the steel and concrete elements.
+
+d.	Steel Beam to Concrete Wall: In this application, steel beams are connected to concrete walls. It can be relevant for various construction projects, such as creating openings in walls or supporting structures. The connection needs to provide stability and withstand the forces acting on it.
+
+Construction Methods:
+Different methods can be employed to establish the connection between steel and concrete. Some commonly used techniques include:
+
+a.	Grouted Threaded Rods: This method involves using threaded rods that are grouted into place. The rods are bolted to the steel member and anchored in the concrete, ensuring a secure connection.
+
+b.	Expanding Anchors: Expanding anchors are another option for connecting steel to concrete. These anchors expand when tightened, creating a firm connection between the steel and concrete elements.
+
+c.	Steel Shims: Steel shims are used to align the steel members and provide a level surface for connection. They help compensate for any irregularities in the concrete surface and ensure a proper fit.
+
+d.	Non-Shrinking Grout or Dry Pack: After the steel members are properly aligned, the space between the base plate and concrete is filled with non-shrinking grout or dry pack. This material provides additional stability and helps distribute the load evenly.
+
+Bolt Hole Sizes:
+Determining the appropriate size of bolt holes is crucial for a secure connection. Factors to consider include the bolt diameter and the thickness of the foundation. It is essential to size the bolt holes properly to ensure the connection can withstand the intended loads. Larger holes may require the use of plate washers for transmitting larger shear forces effectively.
+
+Pull-Out Capacities:
+Pull-out capacities refer to the ability of the connection to resist forces that may cause it to pull out of the concrete. To enhance pull-out resistance, the sides of the bolt holes should be roughened to provide better grip. Additionally, for large base plates exceeding a certain area, additional 50 mm holes may be required. These holes facilitate grout flow, ensuring the presence of grout beneath the base plate.
+
+Exploring different connection scenarios, methods, and techniques
+
+This subsection provides an overview of various connection scenarios between steel members and other structural elements, with a focus on concrete. The subsection is divided into various connection scenarios, each described below:
+
+a.	Steel column to existing concrete foundation:
+The connection involves using grouted threaded rods, expanding anchors, or expanding sockets to bolt the column base plate to the existing concrete foundation. The steel column is aligned and leveled using steel shims, and the space between the base plate and concrete is filled with non-shrinking grout or dry pack. Threaded rods are grouted in place before erecting the steelwork. Oversized holes, plate washers, and diamond core techniques may be used for adjustment and reinforcement considerations. 
+
+b.	Steel column to new concrete foundation:
+Cast-in bolt groups are used to connect the column base plate to the new concrete foundation. Steel shims and non-shrinking grout or dry pack fill the bolt pockets between the base plate and the foundation. Steel plates embedded into the concrete hold the bolts captive, ensuring accurate positioning. Proper sizing of bolt pockets and vertical adjustment with shims are crucial.
+
+c.	Steel beam to existing concrete beam (1):
+A steel connection plate is bolted to the side of the existing concrete beam using expanding anchors or epoxy grout. The steel beam is located on a seating bracket and connected to a web cleat. Slotted holes and separate plates may be used, and High Strength Friction Grip (HSFG) bolts can be employed for axial load transmission.
+
+d.	Steel beam to existing concrete beam (2):
+A steel connection plate is fixed to the side of the existing concrete beam using expanding or chemical anchors. Leveling shims are set on the seating cleat, and the steel beam is located and fixed using HSFG bolts. Site welding or alternative fixing methods may be used for the top plate.
+
+e.	Steel beam to concrete wall:
+A pre-fabricated connection plate is bolted to the wall, connecting to cast-in channels, sockets, or through bolts. Expansion anchors, chemical anchors, or other suitable fasteners are used. Shims may be installed for horizontal adjustment. 
+
+f.	Steel beam to concrete wall with pockets:
+An opening is cast in a concrete wall using box-outs. A steel beam is introduced into the opening, located using shims bedded on epoxy or grout, and attached to the wall reinforcement. Shear starters or drag cleats can enhance the connection.
+
+g.	Steel beam to concrete wall without pockets:
+A steel connection plate is embedded into a concrete wall, flush with the face of the concrete. The plate includes welded sheer connectors and blind bolt fixings. Stiffened cleats are bolted to the connection plate, providing support and restraint. Captive nuts and supplementary reinforcement may be used.
+
+h.	Steel beam to masonry wall (1):
+An opening is formed in the masonry wall to accommodate a pad stone, and the steel beam is installed using shims and bolts. Bolt pockets, oversized holes, and plate washers may be employed for adjustment. Proper packing of masonry around the beam is essential for lateral restraint.
+
+i.	Steel beam to masonry wall (2):
+A pad stone with a cast-in slot is set on a mortar bed, and the steel beam is located on shims and fixed using bolts grouted into the slot. Masonry is then filled around the beam.
+
+j.	Steel beam to masonry wall (3):
+A pad stone with toothed channels is built into or installed in a specially formed opening in the masonry. Vertical shear transfer and eccentric loading resistance are provided by bolted connections to the toothed channels. Through bolts may be considered for single brick or party walls.
+
+k.	Steel beam to existing concrete column (1):
+Anchor holes are set out using a template, and a pre-fabricated sitting bracket is bolted to the column face using drilled and grouted bolts or expanding anchors. Restraint cleats or a welded web cleat may be used for locating and connecting the steel beam.
+
+l.	Steel beam to existing concrete column (2):
+Steel reinforcement in the column is located, and a pre-fabricated steel connection plate is bolted to the column face using expanding anchors. The steel beam is connected to a web cleat and secured using high-strength friction grip bolts.
+
+m.	Steel hanger from existing concrete beam:
+Hangers are bolted to a large steel plate set across the top of the concrete beam on an epoxy bed. The steel beam is attached to the hangers, set to level using shims, and additional web stiffness may be required.
+
+n.	Steel prop to existing concrete floor:
+The steel column is installed directly onto the floor slab or beam, leveled using steel wedges and shims, and connected with epoxy or mortar bed between the top plate and the concrete soffit.
+
+Process of installation of connections in the field
+
+This installation process encompasses several stages to ensure a successful connection.
+
+The first stage involves preparing the surfaces of the steel members and concrete elements. It is crucial to clean these surfaces thoroughly, ensuring they are level and free from any obstructions that could hinder the connection process.
+
+Next, the subsection emphasizes the importance of aligning the components accurately. This is achieved through the use of shims, steel wedges, or slotted holes, which help achieve proper alignment and positioning of the steel members and other elements.
+
+Once alignment is achieved, the components are attached securely. This is done by utilizing appropriate fasteners such as bolts, expanding anchors, or grouted threaded rods. The proper torque or tensioning of these fasteners is essential to ensure a reliable connection.
+
+To enhance stability and strength, the gaps between the connections are filled with non-shrinking grout or dry pack. This grouting and filling process provide additional support and helps maintain the integrity of the connection.
+
+After the installation is complete, a thorough inspection is conducted to check the alignment, stability, and compatibility of the connections. Any necessary adjustments are made at this stage to ensure a proper fit and optimal performance of the connections.
+
+Assessment of strength, stability, and compatibility of connections
+
+The assessment of the strength, stability, and compatibility of the connections is also important and necessary. This assessment involves several key considerations. Firstly, it is important to ensure that the connections can effectively transfer the loads and forces between the steel members and concrete elements without compromising structural integrity. Stability evaluation is also crucial to prevent undesired movement or failure of the connections during installation and under applied loads.
+
+Furthermore, the module highlights the significance of verifying the compatibility of materials used in the connections. Factors such as corrosion resistance, thermal expansion, and differential movement must be taken into account to ensure long-term durability and performance.
+
+Structural analysis and calculations play a vital role in determining the capacity and safety of the connections based on the applied loads and design requirements. In some cases, additional testing, such as pull-out tests or load testing, may be necessary to validate the strength and performance of the connections in real-world conditions.
+
+Troubleshooting connection issues and proposing solutions
+
+This subsection on troubleshooting connection issues addresses common challenges and provides solutions for ensuring reliable connections between steel members and other elements. Main issues include misalignment, insufficient strength, compatibility issues, construction constraints, and structural modifications.
+
+To resolve misalignment, the module recommends using shims or adjusting bolt positions. Insufficient strength can be addressed by analyzing and reinforcing weak areas or exploring alternative connection methods. Compatibility issues can be resolved through appropriate surface treatments, coatings, or specific joint designs.
+
+In the face of construction constraints, the module advises alternative connection approaches that accommodate limited access, restricted space, or existing structural conditions. For structural modifications, guidelines ensure safe and effective adjustments considering design changes, updated load requirements, or unforeseen conditions.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 460.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 464.0
+margin_right = 1000.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 536.0
+margin_bottom = 292.0
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 296.0
+margin_right = 536.0
+margin_bottom = 588.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/0Uctiuz9Tso"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 592.0
+margin_right = 536.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/cYPbONPv3M8"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 1004.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/scripts/web_link_opener.gd" type="Script" id=1]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/ui_elements/icons/link_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=3]
+
+[node name="WebLinkOpener" type="Button"]
+margin_right = 477.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
+icon = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="." to="." method="_on_WebLinkOpener_button_up"]

@@ -1,0 +1,143 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module4" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Provide students with insights into the real-life logistics and practices involved in the delivery of steel elements to construction sites."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Introduction and types of steel elements in construction
+
+Structural steel is a fundamental material extensively used in construction for its strength, versatility, and durability. It is specifically optimized for building construction purposes, with a carbon content of up to 2.1% by weight that affects its yield strength and ductility. There are various types of steel elements and sections commonly used in construction.
+
+Different types of structural steel sections include angled sections, tubular hollow sections, flat sections, parallel flange channels, rectangular hollow sections, square hollow sections, tapered flange beams (I-beams), universal beams (H-beams), and universal columns. These sections are carefully designed to meet specific structural requirements and provide stability, load-bearing capacity, and efficient load distribution within a construction project.
+
+Various types of steel elements in construction are:
+
+a.	Columns: Vertical structural members that provide support and stability to the building. They transfer loads from the roof and upper levels to the foundation.
+
+b.	Beams: Horizontal structural members that connect columns and provide support for the roof and floors. They distribute the loads evenly across the structure.
+
+c.	Roof System: The roof system includes components such as roof trusses, purlins, roof panels, and connections. Trusses are triangular frameworks that support the roof, while purlins provide additional support for the roof panels. Bolts, nuts, washers, and welding are used as connections between these components.
+
+d.	Wall System: The wall system consists of wall frames, wall girts, wall panels, and connections. Wall frames are vertical structural members that support the wall panels, while wall girts provide additional support and serve as attachment points. Bolts, nuts, washers, and welding are used as connections between these components.
+
+e.	Foundations: Foundations are crucial for providing a stable base for the steel building. They typically include footings, foundation walls, slabs, and anchor connections. Anchors are used to secure the steel building to the foundation or concrete slab.
+
+f.	Bracing: Bracing elements, such as diagonal bracing and portal frames, provide stability and resist lateral forces. Bolts, nuts, washers, and welding are used as connections for bracing elements.
+
+g.	Secondary Structural Members: These components include eave struts, flange braces, gable angles, and connections. They reinforce the primary structural elements and provide additional support. Bolts, nuts, washers, and welding are used as connections for these components.
+
+h.	Accessories: Various accessories may be incorporated into a steel building, including doors, windows, vents, skylights, insulation systems, and connection components such as screws and fasteners. Screws and fasteners are used to attach non-structural elements, cladding, and accessories to the steel framework.
+
+i.	Connections, such as bolts, nuts, washers, welding, screws, and fasteners, are essential for securely joining the structural components together, ensuring the overall stability and integrity of the steel building.
+
+Logistics and planning for steel element transportation
+
+Transporting steel elements to construction sites requires careful planning and logistics to ensure safe and efficient delivery. Specialized heavy haul cargo haulers, such as flatbed trailers, are typically used to handle large and heavy steel beams. When transporting steel beams, it is crucial to securely fasten them to the trailer bed or stack them properly. Cranes, forklifts, and sturdy trailers are necessary equipment for loading and transporting steel elements.
+
+In addition to the equipment, certain permits and escort vehicles may be required, depending on the size of the steel elements being transported. Compliance with state regulations is essential, and carriers should be knowledgeable about the specific requirements in different areas.
+
+Loading, Securing, and Safely Delivering Steel Elements to Construction Sites
+
+Loading steel beams onto trailers requires careful planning and adherence to safety protocols. Here are the steps involved in safely loading steel beams:
+
+a.	Designate duties: Ensure that all individuals involved in loading the steel beams have received proper training. They should understand the loading process and potential risks to avoid causing damage or injury.
+
+b.	Ensure flat and level ground: The trailer should be positioned on flat and level ground to ensure stability during the loading process.
+
+c.	Identify obstacles: Be aware of any obstacles in the surrounding area and adjust the loading strategy accordingly. Move nearby objects to a safe distance if necessary.
+
+d.	Check the truck and trailer: Ensure that the truck has sufficient power to tow the load and that the trailer is rated to handle the weight of the cargo. Conduct a thorough inspection of the truck and trailer, paying attention to tires, lights, brakes, tie-down points, and hydraulic hoses.
+
+e.	Prepare the trailer deck: Clean the trailer deck thoroughly to ensure it is ready to receive the load. A clean work area minimizes potential issues.
+
+f.	Approach the trailer: Use a spotter if visibility is obstructed. Slowly drive the high-capacity forklift or crane up to the trailer and lower the load gently to avoid damaging the steel beams or the trailer. Stack the steel beams securely on the trailer.
+
+g.	Secure the steel beams: All loads must be properly secured before transportation. Use chains or straps to secure the steel beams to the trailer or to each other if stacked. Follow DOT requirements, including belly strapping if the load exceeds two levels. Choose appropriate attachment points on the load and the trailer and use ample and appropriate securing devices such as chains, binders, straps, and anchors.
+
+h.	Verify driver visibility: Ensure that the driver has a clear view of the surroundings. The placement of the steel beams should not obstruct the driver's movement, ability to exit the vehicle, or access necessary components or accessories. Compliance with DOT regulations regarding driver visibility is crucial.
+
+Tracking and verifying the arrival of steel elements i/c documentation and receipt
+
+Tracking and verifying the arrival of steel elements is an essential part of the logistics process. Documentation and receipts play a vital role in this phase. To effectively track and verify the arrival of steel elements, the following steps should be followed:
+
+a.	Documented risk assessment: Conduct a risk assessment to identify potential risks and develop appropriate response measures. Document the steps taken to handle risks and potential failures to ensure control and safety.
+
+b.	Personal Protective Equipment (PPE): Provide appropriate PPE to individuals involved in the transportation process. Focus on PPE documentation to ensure the safety of the crew during preparation, tasks, and transport.
+
+c.	Determine weight and dimensions: Accurately measure and record the weight, height, width, and length of the steel beams. Compliance with DOT regulations is dependent on these dimensions, and verification helps avoid fines, delays, or accidents.
+
+d.	Inspect truck and trailer: Thoroughly inspect the truck and trailer to ensure they are in good working order. Pay attention to tires, lights, brakes, tie-down points, and hydraulic hoses. Address any potential problems before beginning the journey.
+
+e.	Verify bill of lading: To verify that the correct structural steel members have arrived on the job site based on the bill of lading, review the document and cross-reference it with purchase orders, physically inspect the delivered steel members for accuracy, check packaging and labeling, refer to accompanying packing lists or manifests, document any discrepancies, and communicate with suppliers or vendors to address and resolve any concerns.
+
+Unloading steel elements into job site
+
+The process of unloading structural steel members on a job site involves several key steps. First, the unloading area is prepared to ensure it is clear and accessible. Communication and coordination take place with the delivery driver and crane operator, if applicable. Safety measures are prioritized by wearing proper personal protective equipment (PPE) and identifying potential hazards. The delivery truck is securely positioned near the unloading area, and restraints on the steel members are removed. The steel members are then lifted and maneuvered using a crane, forklift, or alternative method. Careful lowering and placement follow into the designated location on the job site. Inspection for damage or distortion occurs, with any issues documented and reported. Finally, the unloading area is cleaned up by removing debris and ensuring a hazard-free environment.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+visible = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 470.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 474.0
+margin_right = 990.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 516.0
+margin_bottom = 218.0
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 222.0
+margin_right = 516.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/-GePl7noLuE"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 444.0
+margin_right = 516.0
+margin_bottom = 662.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/lmPJj7VuvgY"
+
+[node name="WebLinkOpener3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="3" instance=ExtResource( 1 )]
+margin_top = 666.0
+margin_right = 516.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/XfJzVw1mMI8"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 994.0

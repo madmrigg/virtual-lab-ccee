@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/function/AnimatedPopUp.tscn" type="PackedScene" id=1]
+
+[node name="SteelDesign" instance=ExtResource( 1 )]
+visible = false
+margin_right = 24.0
+margin_bottom = -256.0
+
+[node name="AnimatedRTLabel" parent="." index="1"]
+margin_left = -1162.5
+margin_top = -138.0
+margin_right = 1162.5
+margin_bottom = 138.0
+bbcode_enabled = true
+bbcode_text = "[center]Steel beams come in various cross-sectional shapes, each with its own advantages and considerations. Common shapes include I-beams (W-beams or wide flange beams), H-beams, C-beams, and tubular sections. The choice of shape depends on factors such as span length, load requirements, and architectural considerations. The cross-sectional shape determines the moment of inertia and section modulus, which are vital for beam strength and stiffness.[/center]"
+text = "Steel beams come in various cross-sectional shapes, each with its own advantages and considerations. Common shapes include I-beams (W-beams or wide flange beams), H-beams, C-beams, and tubular sections. The choice of shape depends on factors such as span length, load requirements, and architectural considerations. The cross-sectional shape determines the moment of inertia and section modulus, which are vital for beam strength and stiffness."
+
+[node name="AutoNarrator" parent="." index="2"]
+margin_right = 2329.0
+margin_bottom = 280.0
+text = "Steel beams come in various cross-sectional shapes, each with its own advantages and considerations. Common shapes include I-beams (W-beams or wide flange beams), H-beams, C-beams, and tubular sections. The choice of shape depends on factors such as span length, load requirements, and architectural considerations. The cross-sectional shape determines the moment of inertia and section modulus, which are vital for beam strength and stiffness."

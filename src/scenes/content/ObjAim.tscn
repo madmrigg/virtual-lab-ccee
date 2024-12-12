@@ -1,0 +1,754 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_small.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_italic.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold_italic.tres" type="DynamicFont" id=4]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_mono.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/scenes/content/Mods.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/function/Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/ui_elements/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=8]
+[ext_resource path="res://src/ui_elements/icons/tag_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=9]
+[ext_resource path="res://src/scripts/functions/rich_text_effects.gd" type="Script" id=10]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_extra_bold.tres" type="DynamicFont" id=11]
+[ext_resource path="res://src/scenes/function/AutoNarrator.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/scenes/function/TextToSpeechButton.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Animation" id=1]
+resource_name = "DisplayObjectives"
+length = 2.5
+tracks/0/type = "method"
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Objective1/RT")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("ScrollContainer/VBoxContainer/Objective2/RT")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("ScrollContainer/VBoxContainer/Objective3/RT")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("ScrollContainer/VBoxContainer/Objective4/RT")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("ScrollContainer/VBoxContainer/Objective5/RT")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("ScrollContainer/VBoxContainer/Objective6/RT")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/keys = {
+"times": PoolRealArray( 1.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("ScrollContainer/VBoxContainer/Objective7/RT")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/keys = {
+"times": PoolRealArray( 1.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("ScrollContainer/VBoxContainer/Objective8/RT")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = false
+tracks/7/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("ScrollContainer/VBoxContainer/Objective1/RT:rect_scale")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("ScrollContainer/VBoxContainer/Objective2/RT:rect_scale")
+tracks/9/interp = 2
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("ScrollContainer/VBoxContainer/Objective3/RT:rect_scale")
+tracks/10/interp = 2
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("ScrollContainer/VBoxContainer/Objective4/RT:rect_scale")
+tracks/11/interp = 2
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("ScrollContainer/VBoxContainer/Objective5/RT:rect_scale")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("ScrollContainer/VBoxContainer/Objective6/RT:rect_scale")
+tracks/13/interp = 2
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 1, 1.1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("ScrollContainer/VBoxContainer/Objective7/RT:rect_scale")
+tracks/14/interp = 2
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("ScrollContainer/VBoxContainer/Objective8/RT:rect_scale")
+tracks/15/interp = 2
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 1.4, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "method"
+tracks/16/path = NodePath("MarginContainer/NextButton")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 1.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_anim"
+} ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("MarginContainer/NextButton:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("MarginContainer/NextButton:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/VBoxContainer/Objective1/RT:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/VBoxContainer/Objective2/RT:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/VBoxContainer/Objective3/RT:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/VBoxContainer/Objective4/RT:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/VBoxContainer/Objective5/RT:rect_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScrollContainer/VBoxContainer/Objective6/RT:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ScrollContainer/VBoxContainer/Objective7/RT:rect_scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ScrollContainer/VBoxContainer/Objective8/RT:rect_scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("MarginContainer/NextButton:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("MarginContainer/NextButton:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Objectives" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -188.0
+margin_bottom = -100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_editor_description_": "To bridge the gap between theoretical learning and real-world application through interactive activities and real construction project datavideos. 
+
+To allow provide students with a comprehensively understanding theof steel design and construction principles, by experiencing real-life scenarios of the construction industry. 
+
+To allow students develop practical skills and knowledge necessary for a successful steel construction careerprojects. 
+
+To familiarize students with industry standards, regulations, and best practices in steel design and construction. 
+
+To bridge the gap between theoretical learning and real-world application through interactive activities and real construction project videos. 
+
+To foster student critical thinking and problem-solving abilities in the context of steel design and construction. 
+
+To instill a strong emphasis onhelp students gain insights in safety, efficiency, and compliance throughout in the steel construction process. 
+
+To equip students with the ability to effectively utilize software tools and techniques relevant to steel design and analysis. "
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+autoplay = "DisplayObjectives"
+anims/DisplayObjectives = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="ScrollContainer" type="AspectRatioContainer" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer"]
+margin_left = 376.0
+margin_right = 1356.0
+margin_bottom = 980.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="1" type="MarginContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_right = 980.0
+
+[node name="Objective1" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 4.0
+margin_right = 980.0
+margin_bottom = 122.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective1"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "1"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective1"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Bridge the gap between theory and real-world application through interactive activities and construction project videos."
+text = "Bridge the gap between theory and real-world application through interactive activities and construction project videos."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective1" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective2" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 126.0
+margin_right = 980.0
+margin_bottom = 244.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective2"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "2"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective2"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Provide students with a comprehensive understanding of steel design and construction principles through real-life scenarios in the construction industry."
+text = "Provide students with a comprehensive understanding of steel design and construction principles through real-life scenarios in the construction industry."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective2" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective3" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 248.0
+margin_right = 980.0
+margin_bottom = 366.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective3"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "3"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective3"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Enable students to develop practical skills and knowledge essential for successful careers in steel construction."
+text = "Enable students to develop practical skills and knowledge essential for successful careers in steel construction."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective3" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective4" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 370.0
+margin_right = 980.0
+margin_bottom = 488.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective4"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "4"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective4"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "Familiarize students with industry standards, regulations, and best practices in steel design and construction."
+text = "Familiarize students with industry standards, regulations, and best practices in steel design and construction."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective4" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective5" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 492.0
+margin_right = 980.0
+margin_bottom = 610.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective5"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "5"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective5"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "To bridge the gap between theoretical learning and real-world application through interactive activities and real construction project videos."
+text = "To bridge the gap between theoretical learning and real-world application through interactive activities and real construction project videos."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective5" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective6" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 614.0
+margin_right = 980.0
+margin_bottom = 732.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective6"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "6"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective6"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "To foster student critical thinking and problem-solving abilities in the context of steel design and construction. "
+text = "To foster student critical thinking and problem-solving abilities in the context of steel design and construction. "
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective6" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective7" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 736.0
+margin_right = 980.0
+margin_bottom = 854.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective7"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "7"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective7"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "To instill a strong emphasis onhelp students gain insights in safety, efficiency, and compliance throughout in the steel construction process. "
+text = "To instill a strong emphasis onhelp students gain insights in safety, efficiency, and compliance throughout in the steel construction process. "
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective7" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="Objective8" type="HBoxContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 858.0
+margin_right = 980.0
+margin_bottom = 976.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Panel/ScrollContainer/VBoxContainer/Objective8"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 11 )
+text = "8"
+icon = ExtResource( 9 )
+
+[node name="RT" type="RichTextLabel" parent="Panel/ScrollContainer/VBoxContainer/Objective8"]
+margin_left = 92.0
+margin_right = 916.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "To equip students with the ability to effectively utilize software tools and techniques relevant to steel design and analysis."
+text = "To equip students with the ability to effectively utilize software tools and techniques relevant to steel design and analysis."
+script = ExtResource( 10 )
+
+[node name="TextToSpeechButton" parent="Panel/ScrollContainer/VBoxContainer/Objective8" instance=ExtResource( 13 )]
+margin_left = 920.0
+margin_right = 980.0
+tts_node = NodePath("../RT")
+
+[node name="2" type="MarginContainer" parent="Panel/ScrollContainer/VBoxContainer"]
+margin_top = 980.0
+margin_right = 980.0
+margin_bottom = 980.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -172.0
+margin_top = -115.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="NextButton" parent="Panel/MarginContainer" instance=ExtResource( 7 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 140.0
+margin_bottom = 83.0
+text = "Next"
+icon = ExtResource( 8 )
+target_scene = ExtResource( 6 )
+
+[node name="AutoNarrator" parent="." instance=ExtResource( 12 )]
+text = "Here, we have listed the various objectives that you will accomplish throughout this course.
+
+Click on the narrator buttons to hear what the objectives have stated if you are having difficulty reading through the text."

@@ -1,0 +1,328 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/ui_elements/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=3]
+[ext_resource path="res://src/scripts/functions/rich_text_effects.gd" type="Script" id=4]
+[ext_resource path="res://src/ui_elements/icons/arrow_back_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=5]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_italic.tres" type="DynamicFont" id=7]
+[ext_resource path="res://src/scripts/module_root.gd" type="Script" id=8]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold_italic.tres" type="DynamicFont" id=9]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_mono.tres" type="DynamicFont" id=10]
+[ext_resource path="res://src/scripts/functions/content_navigator.gd" type="Script" id=11]
+
+[node name="ModuleRoot" type="TabContainer"]
+margin_right = 1472.0
+margin_bottom = 952.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 1 )
+tab_align = 0
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Aim" type="Tabs" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 63.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Aim"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Aim/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1457.0
+margin_bottom = 878.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Aim/PanelContainer/AspectRatioContainer"]
+margin_left = 289.5
+margin_right = 1160.5
+margin_bottom = 871.0
+
+[node name="1" type="MarginContainer" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer"]
+margin_right = 871.0
+margin_bottom = 287.0
+size_flags_vertical = 3
+
+[node name="Aim" type="RichTextLabel" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer"]
+margin_top = 291.0
+margin_right = 871.0
+margin_bottom = 579.0
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 10 )
+custom_fonts/bold_italics_font = ExtResource( 9 )
+custom_fonts/italics_font = ExtResource( 7 )
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+fit_content_height = true
+script = ExtResource( 4 )
+
+[node name="2" type="MarginContainer" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer"]
+margin_top = 583.0
+margin_right = 871.0
+margin_bottom = 871.0
+size_flags_vertical = 3
+
+[node name="Theory" type="Tabs" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 63.0
+margin_right = -4.0
+margin_bottom = -4.0
+script = ExtResource( 11 )
+nav_pages = NodePath("../Simulation/VBoxContainer/Pages")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Theory"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Pages" type="Panel" parent="Theory/VBoxContainer"]
+margin_right = 1464.0
+margin_bottom = 836.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Navigation" type="HBoxContainer" parent="Theory/VBoxContainer"]
+margin_top = 840.0
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+
+[node name="SimNavigation" type="HBoxContainer" parent="Theory/VBoxContainer/Navigation"]
+margin_right = 1464.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+
+[node name="1" type="MarginContainer" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_right = 330.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Back" type="Button" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 334.0
+margin_right = 370.0
+margin_bottom = 45.0
+icon = ExtResource( 5 )
+
+[node name="2" type="MarginContainer" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 374.0
+margin_right = 704.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PageCount" type="Label" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 708.0
+margin_right = 756.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 1 )
+text = "0/0"
+
+[node name="3" type="MarginContainer" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 760.0
+margin_right = 1090.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Forward" type="Button" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 1094.0
+margin_right = 1130.0
+margin_bottom = 45.0
+icon = ExtResource( 3 )
+
+[node name="4" type="MarginContainer" parent="Theory/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 1134.0
+margin_right = 1464.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TheoryTabs" type="TabContainer" parent="Theory"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Simulation" type="Tabs" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 63.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 11 )
+nav_pages = NodePath("VBoxContainer/Pages")
+page_count_label = NodePath("VBoxContainer/Navigation/SimNavigation/PageCount")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Simulation"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Pages" type="Panel" parent="Simulation/VBoxContainer"]
+margin_right = 1464.0
+margin_bottom = 836.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Navigation" type="HBoxContainer" parent="Simulation/VBoxContainer"]
+margin_top = 840.0
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+
+[node name="SimNavigation" type="HBoxContainer" parent="Simulation/VBoxContainer/Navigation"]
+margin_right = 1464.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+
+[node name="1" type="MarginContainer" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_right = 330.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Back" type="Button" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 334.0
+margin_right = 370.0
+margin_bottom = 45.0
+icon = ExtResource( 5 )
+
+[node name="2" type="MarginContainer" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 374.0
+margin_right = 704.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PageCount" type="Label" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 708.0
+margin_right = 756.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 1 )
+text = "0/0"
+
+[node name="3" type="MarginContainer" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 760.0
+margin_right = 1090.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Forward" type="Button" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 1094.0
+margin_right = 1130.0
+margin_bottom = 45.0
+icon = ExtResource( 3 )
+
+[node name="4" type="MarginContainer" parent="Simulation/VBoxContainer/Navigation/SimNavigation"]
+margin_left = 1134.0
+margin_right = 1464.0
+margin_bottom = 45.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RelatedVideos" type="Tabs" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 63.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VideoPanel" type="ScrollContainer" parent="RelatedVideos"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RelatedVideos/VideoPanel"]
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeftMargin" type="MarginContainer" parent="RelatedVideos/VideoPanel/HBoxContainer"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="YTList1" type="VBoxContainer" parent="RelatedVideos/VideoPanel/HBoxContainer"]
+margin_left = 367.0
+margin_right = 730.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -181.5
+margin_top = -22.5
+margin_right = 181.5
+margin_bottom = 22.5
+custom_fonts/font = ExtResource( 1 )
+text = "More Related Videos"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="YTList2" type="VBoxContainer" parent="RelatedVideos/VideoPanel/HBoxContainer"]
+margin_left = 734.0
+margin_right = 1097.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -181.5
+margin_top = -22.5
+margin_right = 181.5
+margin_bottom = 22.5
+custom_fonts/font = ExtResource( 1 )
+text = "Related Software Videos"
+align = 1
+
+[node name="RightMargin" type="MarginContainer" parent="RelatedVideos/VideoPanel/HBoxContainer"]
+margin_left = 1101.0
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="tab_changed" from="." to="." method="_on_ModuleRoot_tab_changed"]
+[connection signal="tab_clicked" from="Theory" to="Theory" method="_on_tab_clicked"]
+[connection signal="button_up" from="Theory/VBoxContainer/Navigation/SimNavigation/Back" to="Theory" method="_on_Back_button_up"]
+[connection signal="button_up" from="Theory/VBoxContainer/Navigation/SimNavigation/Forward" to="Theory" method="_on_Forward_button_up"]
+[connection signal="tab_clicked" from="Simulation" to="Simulation" method="_on_tab_clicked"]
+[connection signal="button_up" from="Simulation/VBoxContainer/Navigation/SimNavigation/Back" to="Simulation" method="_on_Back_button_up"]
+[connection signal="button_up" from="Simulation/VBoxContainer/Navigation/SimNavigation/Forward" to="Simulation" method="_on_Forward_button_up"]

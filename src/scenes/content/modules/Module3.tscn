@@ -1,0 +1,121 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module3" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Familiarize students with industry practices related to the fabrication of steel based on shop drawings, allowing them to gain real-world understanding and knowledge of the fabrication processes, quality control measures, and compliance with specifications observed in the construction industry."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Introduction to shop drawings and their importance
+
+Shop drawings are detailed drawings, prepared by Detailers, that provide specific instructions for fabricating steel components based on the structural engineer's design. These drawings play a crucial role in the construction industry by facilitating the accurate production of steel elements. They serve as a communication tool between the design team, detailers, and fabricators, ensuring that everyone involved has a clear understanding of the project requirements.
+
+The importance of shop drawings lies in their ability to translate complex engineering designs into practical instructions for the fabrication shop. They provide precise dimensions, material specifications, and other essential details that guide the fabrication process. Shop drawings are essential for ensuring that all steel components are manufactured to the exact specifications required for the structure.
+
+Reviewing shop drawings for accuracy and completeness
+
+Reviewing shop drawings is a critical step in the fabrication process to ensure the accuracy and completeness of the drawings before production begins. Detailers carefully examine the drawings to verify that they align with the structural engineer's design and meet all the necessary requirements.
+
+During the review process, detailers and engineers collaborate to identify any discrepancies or potential issues. This collaborative effort ensures that the shop drawings accurately represent the intended design and comply with relevant codes, standards, and specifications.
+
+The review also involves checking for completeness, ensuring that all necessary information is included in the shop drawings. This includes dimensions, member lists, connection details, material specifications, and any other relevant information. The engineer-of-record plays a crucial role in approving the shop drawings to ensure they align with the design and meet the project's requirements.
+
+Understanding fabrication processes and techniques
+
+Fabrication processes and techniques involve a series of steps to transform raw steel into finished components. These processes typically take place in a fabrication shop and are guided by the shop drawings.
+
+The first step in fabrication is cutting the steel to the required dimensions. Computer-controlled cutting machines, such as saws or torch-cutting machines, are used to accurately cut the steel members. The detailer's instructions, translated into computer disks, guide the cutting process to ensure precise sizing and length.
+
+After cutting, the steel members move to the drilling station. Computer-controlled drilling machines are used to create holes for bolted connections. Laser measuring devices assist in monitoring the exact location of the steel, ensuring precise hole placement.
+
+Shaping of the steel elements may also be necessary, which can be achieved through coping machines. These machines burn steel to cut members like a saw or notch the steel as required. The operator inputs the proper disk into the computer to initiate the shaping process, and the piece automatically stops at the precise location where the burning or notching operations will take place.
+
+Additionally, other fabrication processes such as welding, shearing plates, punching holes, bending steel members, and producing connection parts are carried out in the fabrication shop. Advanced machinery, guided by computer instructions, aids in achieving accuracy and efficiency in these processes.
+
+Process of Cutting, drilling, and shaping steel elements
+
+The process of cutting, drilling, and shaping steel elements is crucial for achieving the necessary dimensional accuracy and preparing the steel components for assembly.
+
+Cutting: Computer-controlled cutting machines are used to cut the steel members to the desired size and length. The operator inputs the required dimensions, and the machine automatically positions the steel stock and makes the cuts. The cut pieces are labeled and prepared for further processing.
+
+Drilling: Computer-controlled drilling machines are utilized to create holes in the steel members for bolted connections. The operator inserts the computer disk generated from the shop drawings, and the machine automatically feeds the steel into the drilling machine. Laser measuring devices ensure precise hole placement, and the drilling is typically completed in one pass as the steel member moves through the machine.
+
+Shaping: Shaping processes, such as burning or notching, are carried out using coping machines. The operator inserts the appropriate computer disk, and the machine positions the steel member for the required shaping operations. The machine either cuts the steel like a saw or notches it as per the detailer's instructions.
+
+These processes require skilled operators who monitor the operations and ensure that the steel elements are cut, drilled, and shaped accurately according to the shop drawings.
+
+Ensuring quality control and compliance with specifications
+
+Quality control is a critical aspect of the fabrication process to ensure that the fabricated steel components meet the required specifications and industry standards.
+
+Quality control measures begin with the detailer, who specifies the required quality standards and provides instructions for material preparation, cleaning, and painting. The detailer also considers shipping requirements and crane utilization on the construction site.
+
+Computer-controlled machinery plays a significant role in maintaining quality and precision during fabrication. The use of advanced technology reduces human errors and ensures consistent results. Regular inspections and quality checks are conducted to verify compliance with specifications and identify any deviations.
+
+By adhering to quality control measures, the fabricated steel components meet the necessary requirements for strength, dimensions, and integrity. This ensures that the steel elements will fit together perfectly on the construction site and contribute to the overall structural integrity of the project.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+visible = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 471.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 475.0
+margin_right = 989.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 514.0
+margin_bottom = 218.0
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 222.0
+margin_right = 514.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/j5UwD_hvFEc"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 444.0
+margin_right = 514.0
+margin_bottom = 662.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/NHvhnE33ztc"
+
+[node name="WebLinkOpener3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="3" instance=ExtResource( 1 )]
+margin_top = 666.0
+margin_right = 514.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/slFyCpRDiqE"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 993.0

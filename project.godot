@@ -1,0 +1,98 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "OptionButton",
+"class": "BeamTypes",
+"language": "GDScript",
+"path": "res://src/scripts/modules/beam_types.gd"
+}, {
+"base": "OptionButton",
+"class": "MaterialTypes",
+"language": "GDScript",
+"path": "res://src/scripts/modules/material_types.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "TextToSpeech",
+"language": "GDScript",
+"path": "res://addons/texttospeech/TextToSpeech.gd"
+}, {
+"base": "AudioStreamPlayer2D",
+"class": "TextToSpeech2D",
+"language": "GDScript",
+"path": "res://addons/texttospeech/TextToSpeech2D.gd"
+}, {
+"base": "AudioStreamPlayer3D",
+"class": "TextToSpeech3D",
+"language": "GDScript",
+"path": "res://addons/texttospeech/TextToSpeech3D.gd"
+}, {
+"base": "Reference",
+"class": "YtDlp",
+"language": "GDScript",
+"path": "res://addons/yt-dlp/yt_dlp.gd"
+} ]
+_global_script_class_icons={
+"BeamTypes": "",
+"MaterialTypes": "",
+"TextToSpeech": "",
+"TextToSpeech2D": "",
+"TextToSpeech3D": "",
+"YtDlp": ""
+}
+
+[application]
+
+config/name="V Lab"
+run/main_scene="res://src/scenes/Home.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://src/scripts/global/global_variables.gd"
+SceneChanger="*res://src/scenes/global/SceneChanger.tscn"
+GlobalVideoPlayer="*res://src/scenes/global/VideoPlayer.tscn"
+TextToSpeechEngine="*res://addons/texttospeech/TextToSpeechEngine.gd"
+TextToSpeechGlobal="*res://src/scenes/global/TextToSpeech.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=true
+window/size/test_width=1280
+window/size/test_height=720
+window/per_pixel_transparency/allowed=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/speechtotext/plugin.cfg", "res://addons/texttospeech/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[input]
+
+mouse_left_click={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/function/AnimatedPopUp.tscn" type="PackedScene" id=1]
+
+[node name="StructuralAnalysis" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 2333.0
+margin_bottom = 238.0
+
+[node name="AnimatedRTLabel" parent="." index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 2329.0
+margin_bottom = 234.0
+bbcode_enabled = true
+bbcode_text = "[center]Before designing steel connections, a comprehensive structural analysis is performed.
+
+This analysis determines the loads that the beam will experience, including dead loads, live loads, and other applicable loads such as wind or snow
+
+ Understanding the forces acting on the beam and the resulting internal stresses is essential for designing effective connections.[/center]"
+text = "Before designing steel connections, a comprehensive structural analysis is performed.
+
+This analysis determines the loads that the beam will experience, including dead loads, live loads, and other applicable loads such as wind or snow
+
+ Understanding the forces acting on the beam and the resulting internal stresses is essential for designing effective connections."
+
+[node name="AutoNarrator" parent="." index="2"]
+margin_right = 2329.0
+margin_bottom = 234.0
+text = "Before designing steel connections, a comprehensive structural analysis is performed. This analysis determines the loads that the beam will experience, including dead loads, live loads, and other applicable loads such as wind or snow. Understanding the forces acting on the beam and the resulting internal stresses is essential for designing effective connections."

@@ -1,0 +1,693 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scenes/content/modules/Module1/ConnectionSelection.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/scenes/function/TabChanger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/ui_elements/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=5]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold.tres" type="DynamicFont" id=7]
+[ext_resource path="res://src/scenes/function/Button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/scenes/content/modules/Module2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/FlexuralDesign.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/StructuralAnalysis.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/ShearDesign.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/scripts/functions/rich_text_effects.gd" type="Script" id=13]
+[ext_resource path="res://src/scenes/content/modules/Module1/BeamSelection.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/scenes/function/AutoNarrator.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/scenes/function/AnimatedRTLabel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/LimitStatesDesign.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/ConnectionDesign.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/CrossSectionalShape.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/MaterialSelection.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/scenes/content/modules/Module1/theory/BeamSizingAndDesigningLoads.tscn" type="PackedScene" id=21]
+
+[sub_resource type="Animation" id=2]
+resource_name = "Tab0StartAnim"
+tracks/0/type = "method"
+tracks/0/path = NodePath("Aim/PanelContainer/AspectRatioContainer/VBoxContainer/Aim")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Aim/PanelContainer/AspectRatioContainer/VBoxContainer/Aim/AutoNarrator")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "tts"
+} ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Tab1StartAnim"
+
+[node name="Module 1" instance=ExtResource( 2 )]
+
+[node name="AnimationPlayer" parent="." index="0"]
+autoplay = "Tab0StartAnim"
+anims/Tab0StartAnim = SubResource( 2 )
+anims/Tab1StartAnim = SubResource( 3 )
+
+[node name="1" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer" index="0"]
+margin_bottom = 159.0
+
+[node name="Aim" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer" index="1"]
+margin_top = 163.0
+margin_bottom = 708.0
+bbcode_text = "[center][color=red][b]MODULE 1: STEEL CONNECTION DESIGN AND 3D MODEL CHECKING[/b][/color]
+
+[color=green][b]Module’s Aim[/b][/color]
+
+Provide students with the opportunity to learn designing and verifying steel connections and by experiencinge industry practices in designing and verifying steel connections using 3D modeling software, andexperiencing real-life scenarioscenarios of the construction industry.[/center]
+"
+text = "MODULE 1: STEEL CONNECTION DESIGN AND 3D MODEL CHECKING
+
+Module’s Aim
+
+Provide students with the opportunity to learn designing and verifying steel connections and by experiencinge industry practices in designing and verifying steel connections using 3D modeling software, andexperiencing real-life scenarioscenarios of the construction industry.
+"
+
+[node name="AutoNarrator" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer/Aim" index="1" instance=ExtResource( 15 )]
+margin_top = -163.0
+margin_bottom = -149.0
+text = "MODULE 1: STEEL CONNECTION DESIGN AND 3D MODEL CHECKING"
+tts_on_start = false
+
+[node name="2" parent="Aim/PanelContainer/AspectRatioContainer/VBoxContainer" index="2"]
+margin_top = 712.0
+
+[node name="TabChanger" parent="Aim" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -108.0
+margin_top = -51.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../..")
+next_tab = NodePath("../../Theory")
+
+[node name="Theory" parent="." index="2"]
+visible = false
+nav_pages = NodePath("VBoxContainer/Pages")
+page_count_label = NodePath("VBoxContainer/Navigation/SimNavigation/PageCount")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Theory/VBoxContainer" index="0"]
+
+[node name="1" parent="Theory/VBoxContainer/Pages" index="0" instance=ExtResource( 16 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.0
+margin_bottom = 0.0
+bbcode_enabled = true
+bbcode_text = "[center]Introduction to steel connection design principles and Considerations:
+[color=red]
+[url=0]a.	Structural Analysis[/url]
+
+[url=1]b.	Material Selection[/url]
+
+[url=2]c.	Cross-Sectional Shape[/url]
+
+[url=3]d.	Limit States Design[/url]
+
+[url=4]e.	Beam Sizing and Design Loads[/url]
+
+[url=5]f.	Flexural Design[/url]
+
+[url=6]g.	Shear Design[/url]
+
+[url=7]h.	Connection Design[/url]
+[/color][/center]
+"
+text = "Introduction to steel connection design principles and Considerations:
+
+a.	Structural Analysis
+
+b.	Material Selection
+
+c.	Cross-Sectional Shape
+
+d.	Limit States Design
+
+e.	Beam Sizing and Design Loads
+
+f.	Flexural Design
+
+g.	Shear Design
+
+h.	Connection Design
+
+"
+meta_link_res = [ ExtResource( 11 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ) ]
+
+[node name="2" parent="Theory/VBoxContainer/Pages" index="1" instance=ExtResource( 16 )]
+
+[node name="3" parent="Theory/VBoxContainer/Pages" index="2" instance=ExtResource( 16 )]
+
+[node name="TabChanger" parent="Theory/VBoxContainer/Pages/3" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 607.0
+margin_top = 326.0
+margin_right = 715.0
+margin_bottom = 377.0
+text = "Next"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../../../../..")
+next_tab = NodePath("../../../../../Simulation")
+
+[node name="TheoryTabs" parent="Theory" index="1"]
+custom_fonts/font = ExtResource( 6 )
+tab_align = 0
+
+[node name="Design Principles" type="Tabs" parent="Theory/TheoryTabs" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 63.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = ExtResource( 6 )
+
+[node name="RTLabelAnimated" parent="Theory/TheoryTabs/Design Principles" index="0" instance=ExtResource( 16 )]
+margin_left = -728.0
+margin_top = -368.0
+margin_right = 728.0
+margin_bottom = 368.0
+bbcode_enabled = true
+bbcode_text = "[center][color=red][url=0]a.	Structural Analysis[/url]
+
+[url=1]b.	Material Selection[/url]
+
+[url=2]c.	Cross-Sectional Shape[/url]
+
+[url=3]d.	Limit States Design[/url]
+
+[url=4]e.	Beam Sizing and Design Loads[/url]
+
+[url=5]f.	Flexural Design[/url]
+
+[url=6]g.	Shear Design[/url]
+
+[url=7]h.	Connection Design[/url][/color][/center]
+"
+text = "a.	Structural Analysis
+
+b.	Material Selection
+
+c.	Cross-Sectional Shape
+
+d.	Limit States Design
+
+e.	Beam Sizing and Design Loads
+
+f.	Flexural Design
+
+g.	Shear Design
+
+h.	Connection Design
+"
+meta_link_res = [ ExtResource( 11 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 18 ) ]
+
+[node name="TabChanger" parent="Theory/TheoryTabs/Design Principles" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -108.0
+margin_top = -51.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../..")
+next_tab = NodePath("../../Steel Connections")
+
+[node name="Steel Connections" type="Tabs" parent="Theory/TheoryTabs" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 6 )
+
+[node name="RTLabelAnimated" parent="Theory/TheoryTabs/Steel Connections" index="0" instance=ExtResource( 16 )]
+margin_left = -728.0
+margin_top = -276.0
+margin_right = 728.0
+margin_bottom = 276.0
+bbcode_enabled = true
+bbcode_text = "[center][color=red]
+[url=0]a.	Bolted Framed Connections[/url]
+
+[url=1]b.	Bolted Seated Connections[/url]
+
+[url=2]c.	Welded Framed Connections[/url]
+
+[url=3]d.	Welded Seat Connections[/url]
+
+[url=4]e.	End Plate Connections[/url]
+
+[url=5]f.	Special Connections[/url][/color][/center]"
+text = "
+a.	Bolted Framed Connections
+
+b.	Bolted Seated Connections
+
+c.	Welded Framed Connections
+
+d.	Welded Seat Connections
+
+e.	End Plate Connections
+
+f.	Special Connections"
+meta_link_res = [ null, null, null, null, null, null ]
+
+[node name="TabChanger" parent="Theory/TheoryTabs/Steel Connections" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -108.0
+margin_top = -51.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../..")
+next_tab = NodePath("../../Related 3D Software")
+
+[node name="Related 3D Software" type="Tabs" parent="Theory/TheoryTabs" index="2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+custom_fonts/font = ExtResource( 6 )
+
+[node name="RTLabelAnimated" parent="Theory/TheoryTabs/Related 3D Software" index="0" instance=ExtResource( 16 )]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.0
+margin_bottom = 0.0
+bbcode_enabled = true
+bbcode_text = "a.	RAM Connection
+
+b.	Tekla Structures
+
+c.	Autodesk Advance Steel
+
+d.	RISAConnection
+
+e.	IDEA StatiCa Connection Design
+"
+text = "a.	RAM Connection
+
+b.	Tekla Structures
+
+c.	Autodesk Advance Steel
+
+d.	RISAConnection
+
+e.	IDEA StatiCa Connection Design
+"
+
+[node name="TabChanger" parent="Theory/TheoryTabs/Related 3D Software" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -108.0
+margin_top = -51.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Next"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../../../..")
+next_tab = NodePath("../../../../Simulation")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Simulation" index="0"]
+root_node = NodePath("../VBoxContainer")
+
+[node name="VBoxContainer" parent="Simulation" index="1"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Intro" type="Control" parent="Simulation/VBoxContainer/Pages" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Simulation/VBoxContainer/Pages/Intro" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = ExtResource( 6 )
+text = "This module will introduce you to the various types of steel beams and their connections. Please use the arrows below to navigate throughout the simulation.
+
+The simulation is work in progress!"
+script = ExtResource( 13 )
+
+[node name="SelectBeams" type="Control" parent="Simulation/VBoxContainer/Pages" index="1"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Simulation/VBoxContainer/Pages/SelectBeams" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "Please select a beam from the following types of beams."
+text = "Please select a beam from the following types of beams."
+script = ExtResource( 13 )
+
+[node name="BeamSelection" parent="Simulation/VBoxContainer/Pages" index="2" instance=ExtResource( 14 )]
+visible = false
+
+[node name="SelectConnections" type="Control" parent="Simulation/VBoxContainer/Pages" index="3"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Simulation/VBoxContainer/Pages/SelectConnections" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Please select the types of connections from the list provided velow."
+
+[node name="ConnectionSelection" parent="Simulation/VBoxContainer/Pages" index="4" instance=ExtResource( 3 )]
+visible = false
+
+[node name="Input" type="Control" parent="Simulation/VBoxContainer/Pages" index="5"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Simulation/VBoxContainer/Pages/Input" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Simulation/VBoxContainer/Pages/Input/AspectRatioContainer" index="0"]
+margin_left = 314.0
+margin_right = 1150.0
+margin_bottom = 836.0
+alignment = 1
+
+[node name="Label" type="Label" parent="Simulation/VBoxContainer/Pages/Input/AspectRatioContainer/VBoxContainer" index="0"]
+margin_top = 353.0
+margin_right = 836.0
+margin_bottom = 398.0
+custom_fonts/font = ExtResource( 6 )
+text = "INPUT IS WIP"
+
+[node name="Beam" type="Label" parent="Simulation/VBoxContainer/Pages/Input/AspectRatioContainer/VBoxContainer" index="1"]
+margin_top = 402.0
+margin_right = 836.0
+margin_bottom = 440.0
+custom_fonts/font = ExtResource( 7 )
+
+[node name="Connection" type="Label" parent="Simulation/VBoxContainer/Pages/Input/AspectRatioContainer/VBoxContainer" index="2"]
+margin_top = 444.0
+margin_right = 836.0
+margin_bottom = 482.0
+custom_fonts/font = ExtResource( 7 )
+
+[node name="Output" type="Control" parent="Simulation/VBoxContainer/Pages" index="6"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Simulation/VBoxContainer/Pages/Output" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = ExtResource( 6 )
+bbcode_enabled = true
+bbcode_text = "OUTPUT IS WIP"
+text = "OUTPUT IS WIP"
+
+[node name="TabChanger" parent="Simulation/VBoxContainer/Pages/Output" index="1" instance=ExtResource( 4 )]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -258.0
+margin_right = 0.0
+margin_bottom = 51.0
+text = "Related Videos"
+icon = ExtResource( 5 )
+icon_align = 2
+tab_container = NodePath("../../../../..")
+next_tab = NodePath("../../../../../RelatedVideos")
+
+[node name="GoToModule2" parent="Simulation/VBoxContainer/Pages/Output" index="2" instance=ExtResource( 8 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -247.0
+margin_top = -51.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Go To Module 2"
+target_scene = ExtResource( 9 )
+is_animated = true
+is_animated_on_hover = false
+
+[node name="RelatedVideos" parent="." index="4"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RelatedVideos" index="0"]
+visible = false
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LeftMargin" type="MarginContainer" parent="RelatedVideos/HBoxContainer" index="0"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="YTList1444" type="VBoxContainer" parent="RelatedVideos/HBoxContainer" index="1"]
+margin_left = 367.0
+margin_right = 730.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="RelatedVideos/HBoxContainer/YTList1444" index="0"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="RelatedVideos/HBoxContainer/YTList1444/Panel" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -263.5
+margin_top = -22.5
+margin_right = 263.5
+margin_bottom = 22.5
+custom_fonts/font = ExtResource( 6 )
+text = "Related Videos"
+align = 1
+valign = 1
+
+[node name="YTList2333" type="VBoxContainer" parent="RelatedVideos/HBoxContainer" index="2"]
+margin_left = 734.0
+margin_right = 1097.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="RelatedVideos/HBoxContainer/YTList2333" index="0"]
+margin_right = 363.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="RelatedVideos/HBoxContainer/YTList2333/Panel" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -263.5
+margin_top = -22.5
+margin_right = 263.5
+margin_bottom = 22.5
+custom_fonts/font = ExtResource( 6 )
+text = "Related Software Videos"
+align = 1
+valign = 1
+
+[node name="RightMargin" type="MarginContainer" parent="RelatedVideos/HBoxContainer" index="3"]
+margin_left = 1101.0
+margin_right = 1464.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VideoPanel" parent="RelatedVideos" index="1"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 339.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 343.0
+margin_right = 870.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 527.0
+margin_bottom = 440.0
+
+[node name="Link1" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 444.0
+margin_right = 527.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/535w4KFkETQ"
+
+[node name="Link2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+visible = false
+margin_top = 296.0
+margin_right = 527.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/0xOdVPtARXs"
+
+[node name="Link3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="3" instance=ExtResource( 1 )]
+visible = false
+margin_top = 444.0
+margin_right = 527.0
+margin_bottom = 588.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/OQaCJC-QI8Q"
+
+[node name="Link4" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="4" instance=ExtResource( 1 )]
+visible = false
+margin_top = 592.0
+margin_right = 527.0
+margin_bottom = 736.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/AOieRp-5P0Q"
+
+[node name="Link5" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="5" instance=ExtResource( 1 )]
+visible = false
+margin_top = 740.0
+margin_right = 527.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/iLD2V81uvpQ"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+margin_left = 732.0
+margin_right = 1263.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="0"]
+margin_right = 531.0
+margin_bottom = 144.0
+
+[node name="Link1" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="1" instance=ExtResource( 1 )]
+margin_top = 148.0
+margin_right = 531.0
+margin_bottom = 292.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/KjMUXRseCuk"
+
+[node name="Link2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="2" instance=ExtResource( 1 )]
+margin_top = 296.0
+margin_right = 531.0
+margin_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/IeJvrAiJEq8"
+
+[node name="Link3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="3" instance=ExtResource( 1 )]
+margin_top = 444.0
+margin_right = 531.0
+margin_bottom = 588.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/vewl3Ebm9Kw"
+
+[node name="Link4" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="4" instance=ExtResource( 1 )]
+margin_top = 592.0
+margin_right = 531.0
+margin_bottom = 736.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/-QugNBYPkws"
+
+[node name="Link5" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="5" instance=ExtResource( 1 )]
+margin_top = 740.0
+margin_right = 531.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/MbjiCTydFzs"
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 874.0
+margin_right = 1213.0
+
+[node name="GoToModule2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="4" instance=ExtResource( 8 )]
+margin_left = 1217.0
+margin_right = 1464.0
+size_flags_vertical = 0
+text = "Go To Module 2"
+target_scene = ExtResource( 9 )
+is_animated = true
+is_animated_on_hover = false
+
+[connection signal="selected_connection" from="Simulation/VBoxContainer/Pages/ConnectionSelection" to="Simulation" method="_on_ConnectionSelection_selected_connection"]

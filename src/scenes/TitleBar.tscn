@@ -1,0 +1,280 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://src/scripts/title_bar.gd" type="Script" id=1]
+[ext_resource path="res://src/ui_elements/icons/search_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=2]
+[ext_resource path="res://src/ui_elements/icons/close_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=3]
+[ext_resource path="res://src/scripts/popup_close.gd" type="Script" id=4]
+[ext_resource path="res://src/ui_elements/logos/NDSU.oneline.png" type="Texture" id=5]
+[ext_resource path="res://src/ui_elements/fonts/Monoton/monoton_title.tres" type="DynamicFont" id=6]
+[ext_resource path="res://src/scenes/content/ObjAim.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/content/Feedback.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/ui_elements/icons/fullscreen_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=9]
+[ext_resource path="res://src/ui_elements/icons/minimize_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=10]
+[ext_resource path="res://src/scenes/function/TexButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=12]
+[ext_resource path="res://src/scenes/content/Intro.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-yury-kim-585418.jpg" type="Texture" id=14]
+[ext_resource path="res://src/scenes/function/Button.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/ui_elements/icons/menu_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=16]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-sasha-prasastika-3780477.jpg" type="Texture" id=17]
+[ext_resource path="res://src/ui_elements/icons/home_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=18]
+[ext_resource path="res://src/ui_elements/icons/forum_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=19]
+[ext_resource path="res://src/ui_elements/icons/target_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=20]
+[ext_resource path="res://src/scenes/content/Home.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/scenes/content/modules/Module1.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/scenes/content/modules/Module3.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/scenes/content/modules/Module4.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/ui_elements/icons/description_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=25]
+[ext_resource path="res://src/scenes/content/modules/Module2.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/scenes/content/modules/Module6.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/scenes/content/modules/Module7.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/scenes/content/modules/Module5.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/scenes/function/AnimatedPopUpButton.tscn" type="PackedScene" id=31]
+[ext_resource path="res://src/audio/ui_elements/click1.ogg" type="AudioStream" id=32]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-furkan-güneş-7461112.jpg" type="Texture" id=33]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-nicole-rathmayr-220885.jpg" type="Texture" id=34]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-igor-starkov-1117452.jpg" type="Texture" id=35]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-photoscom-93398.jpg" type="Texture" id=36]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-александр-лич-8803230.jpg" type="Texture" id=37]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+light_mode = 1
+
+[node name="TitleBar" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -1002.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1913.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Menu" parent="HBoxContainer" instance=ExtResource( 31 )]
+margin_right = 60.0
+margin_bottom = 64.0
+icon = ExtResource( 16 )
+popup_anim = "default"
+
+[node name="AnimatedPopUp" parent="HBoxContainer/Menu" index="0"]
+margin_right = 255.0
+margin_bottom = 352.0
+
+[node name="Contents" type="VBoxContainer" parent="HBoxContainer/Menu/AnimatedPopUp" index="0"]
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 251.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+
+[node name="Menu" type="Button" parent="HBoxContainer/Menu/AnimatedPopUp/Contents"]
+margin_right = 247.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 12 )
+text = "Menu"
+icon = ExtResource( 16 )
+script = ExtResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Menu"]
+stream = ExtResource( 32 )
+
+[node name="Home" parent="HBoxContainer/Menu/AnimatedPopUp/Contents" instance=ExtResource( 15 )]
+margin_top = 58.0
+margin_right = 247.0
+margin_bottom = 112.0
+text = "Home"
+icon = ExtResource( 18 )
+icon_align = 0
+target_scene = ExtResource( 21 )
+
+[node name="Introduction" parent="HBoxContainer/Menu/AnimatedPopUp/Contents" instance=ExtResource( 15 )]
+margin_top = 116.0
+margin_right = 247.0
+margin_bottom = 170.0
+size_flags_horizontal = 3
+text = "Introduction"
+icon = ExtResource( 2 )
+icon_align = 0
+target_scene = ExtResource( 13 )
+
+[node name="Objective(s)" parent="HBoxContainer/Menu/AnimatedPopUp/Contents" instance=ExtResource( 15 )]
+margin_top = 174.0
+margin_right = 247.0
+margin_bottom = 228.0
+size_flags_horizontal = 3
+text = "Objective(s)"
+icon = ExtResource( 20 )
+icon_align = 0
+target_scene = ExtResource( 7 )
+
+[node name="Module(s)" parent="HBoxContainer/Menu/AnimatedPopUp/Contents" instance=ExtResource( 31 )]
+margin_top = 232.0
+margin_right = 247.0
+margin_bottom = 286.0
+custom_fonts/font = ExtResource( 12 )
+text = "Module(s)"
+icon = ExtResource( 25 )
+align = 0
+popup_panel = NodePath("../..")
+
+[node name="AnimatedPopUp" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)" index="0"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -311.0
+margin_top = -89.0
+margin_right = 311.0
+margin_bottom = 89.0
+
+[node name="ModulesGrid" type="GridContainer" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp" index="2"]
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 1040.0
+margin_bottom = -4.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+
+[node name="Module 1" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_right = 256.0
+margin_bottom = 256.0
+hint_tooltip = "Module 1"
+texture_normal = ExtResource( 17 )
+stretch_mode = 1
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 22 )
+is_animated_on_hover = true
+
+[node name="Module 2" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_left = 260.0
+margin_right = 516.0
+margin_bottom = 256.0
+hint_tooltip = "Module 2"
+texture_normal = ExtResource( 33 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 27 )
+is_animated_on_hover = true
+
+[node name="Module 3" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_left = 520.0
+margin_right = 776.0
+margin_bottom = 256.0
+hint_tooltip = "Module 3"
+texture_normal = ExtResource( 37 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 23 )
+is_animated_on_hover = true
+
+[node name="Module 4" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_left = 780.0
+margin_right = 1036.0
+margin_bottom = 256.0
+hint_tooltip = "Module 4"
+texture_normal = ExtResource( 36 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 24 )
+is_animated_on_hover = true
+
+[node name="Module 5" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_top = 260.0
+margin_right = 256.0
+margin_bottom = 516.0
+hint_tooltip = "Module 5"
+texture_normal = ExtResource( 34 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 30 )
+is_animated_on_hover = true
+
+[node name="Module 6" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_left = 260.0
+margin_top = 260.0
+margin_right = 516.0
+margin_bottom = 516.0
+hint_tooltip = "Module 6"
+texture_normal = ExtResource( 35 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 28 )
+is_animated_on_hover = true
+
+[node name="Module 7" parent="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)/AnimatedPopUp/ModulesGrid" instance=ExtResource( 11 )]
+margin_left = 520.0
+margin_top = 260.0
+margin_right = 776.0
+margin_bottom = 516.0
+hint_tooltip = "Module 7"
+texture_normal = ExtResource( 14 )
+popup_panel = NodePath("../..")
+target_scene = ExtResource( 29 )
+is_animated_on_hover = true
+
+[node name="Feedback" parent="HBoxContainer/Menu/AnimatedPopUp/Contents" instance=ExtResource( 15 )]
+margin_top = 290.0
+margin_right = 247.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+text = "Feedback"
+icon = ExtResource( 19 )
+icon_align = 0
+target_scene = ExtResource( 8 )
+
+[node name="Logo" type="TextureRect" parent="HBoxContainer"]
+visible = false
+material = SubResource( 1 )
+margin_left = 64.0
+margin_right = 453.0
+margin_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource( 5 )
+stretch_mode = 4
+
+[node name="Title" type="Label" parent="HBoxContainer"]
+margin_left = 64.0
+margin_top = 7.0
+margin_right = 1714.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 6 )
+text = "Steel Design & Construction (CM&E 450) Virtual Lab"
+align = 1
+
+[node name="Buttons" type="HBoxContainer" parent="HBoxContainer"]
+margin_left = 1718.0
+margin_right = 1906.0
+margin_bottom = 64.0
+
+[node name="MinMax" type="Button" parent="HBoxContainer/Buttons"]
+margin_right = 60.0
+margin_bottom = 64.0
+hint_tooltip = "Minimize/Maximize window."
+icon = ExtResource( 10 )
+
+[node name="FullScreen" type="Button" parent="HBoxContainer/Buttons"]
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 64.0
+hint_tooltip = "Make window fullscreen."
+icon = ExtResource( 9 )
+
+[node name="Exit" type="Button" parent="HBoxContainer/Buttons"]
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 64.0
+hint_tooltip = "Exit application."
+icon = ExtResource( 3 )
+
+[connection signal="gui_input" from="." to="." method="_on_TitleBar_gui_input"]
+[connection signal="button_up" from="HBoxContainer/Menu/AnimatedPopUp/Contents/Menu" to="HBoxContainer/Menu/AnimatedPopUp/Contents/Menu" method="_on_button_up"]
+[connection signal="button_up" from="HBoxContainer/Buttons/MinMax" to="." method="_on_MinMax_button_up"]
+[connection signal="button_up" from="HBoxContainer/Buttons/FullScreen" to="." method="_on_FullScreen_button_up"]
+[connection signal="button_up" from="HBoxContainer/Buttons/Exit" to="." method="_on_Exit_button_up"]
+
+[editable path="HBoxContainer/Menu"]
+[editable path="HBoxContainer/Menu/AnimatedPopUp/Contents/Module(s)"]

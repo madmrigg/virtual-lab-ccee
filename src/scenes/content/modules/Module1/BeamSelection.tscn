@@ -1,0 +1,260 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/scenes/content/modules/Module1/O_Beam.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scripts/functions/Module1/beam_selection.gd" type="Script" id=2]
+[ext_resource path="res://src/scripts/modules/beam.gd" type="Script" id=3]
+[ext_resource path="res://src/3d/textures/rusty_metal_sheet/rusty_metal_sheet.tres" type="Material" id=5]
+[ext_resource path="res://src/scenes/content/modules/Module1/C_Beam.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scenes/content/modules/Module1/H_Beam.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/scenes/content/modules/Module1/I_Beam.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=2]
+resource_name = "C_Beam"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/Selection/C_Beam:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "H_Beam"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/Selection/H_Beam:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "I_Beam"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/Selection/I_Beam:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "O_Beam"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/Selection/O_Beam:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/Selection/C_Beam:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/Selection/H_Beam:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/Selection/I_Beam:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/Selection/O_Beam:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.105882, 0.0941176, 0.0941176, 1 )
+
+[node name="ColumnSelection" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+c_beam = NodePath("HBoxContainer/Selection/C_Beam")
+h_beam = NodePath("HBoxContainer/Selection/H_Beam")
+i_beam = NodePath("HBoxContainer/Selection/I_Beam")
+o_beam = NodePath("HBoxContainer/Selection/O_Beam")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/C_Beam = SubResource( 2 )
+anims/H_Beam = SubResource( 4 )
+anims/I_Beam = SubResource( 5 )
+anims/O_Beam = SubResource( 6 )
+anims/RESET = SubResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Selection" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 192.0
+margin_bottom = 1080.0
+alignment = 1
+
+[node name="C_Beam" parent="HBoxContainer/Selection" instance=ExtResource( 7 )]
+margin_left = 0.0
+margin_top = 52.0
+margin_right = 192.0
+margin_bottom = 293.0
+
+[node name="H_Beam" parent="HBoxContainer/Selection" instance=ExtResource( 8 )]
+margin_top = 297.0
+margin_bottom = 538.0
+script = ExtResource( 3 )
+
+[node name="I_Beam" parent="HBoxContainer/Selection" instance=ExtResource( 9 )]
+margin_top = 542.0
+margin_right = 192.0
+margin_bottom = 783.0
+script = ExtResource( 3 )
+
+[node name="O_Beam" parent="HBoxContainer/Selection" instance=ExtResource( 1 )]
+margin_top = 787.0
+margin_right = 192.0
+margin_bottom = 1028.0
+script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 196.0
+margin_right = 1056.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ViewPane" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 1060.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Others" type="Spatial" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Others"]
+environment = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Others"]
+transform = Transform( 1, -4.89239e-09, -1.40751e-08, 1.49012e-08, 0.328323, 0.944566, 0, -0.944566, 0.328323, 0, 2.96046, 2.19331 )
+
+[node name="Beams" type="Spatial" parent="Others"]
+visible = false
+
+[node name="W_Beam" type="CSGCombiner" parent="Others/Beams"]
+visible = false
+material_override = ExtResource( 5 )
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/W_Beam"]
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/W_Beam/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.10155 )
+operation = 2
+width = 1.38283
+
+[node name="CSGBox2" type="CSGBox" parent="Others/Beams/W_Beam/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1517 )
+operation = 2
+width = 1.38283
+
+[node name="T_Beam" type="CSGCombiner" parent="Others/Beams"]
+visible = false
+material_override = ExtResource( 5 )
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/T_Beam"]
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/T_Beam/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.367889, 0, 1.02176 )
+operation = 2
+width = 1.88972
+
+[node name="CSGBox2" type="CSGBox" parent="Others/Beams/T_Beam/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.367889, 0, -1.25238 )
+operation = 2
+width = 1.88972
+
+[node name="L_Beam" type="CSGCombiner" parent="Others/Beams"]
+visible = false
+material_override = ExtResource( 5 )
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/L_Beam"]
+
+[node name="CSGBox" type="CSGBox" parent="Others/Beams/L_Beam/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.373112, 0, 0.374279 )
+operation = 2
+width = 1.88972
+
+[connection signal="gui_input" from="HBoxContainer/Selection/C_Beam" to="." method="_on_C_Beam_gui_input"]
+[connection signal="mouse_entered" from="HBoxContainer/Selection/C_Beam" to="." method="_on_C_Beam_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Selection/C_Beam" to="." method="_on_C_Beam_mouse_exited"]
+[connection signal="gui_input" from="HBoxContainer/Selection/H_Beam" to="." method="_on_H_Beam_gui_input"]
+[connection signal="mouse_entered" from="HBoxContainer/Selection/H_Beam" to="." method="_on_H_Beam_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Selection/H_Beam" to="." method="_on_H_Beam_mouse_exited"]
+[connection signal="gui_input" from="HBoxContainer/Selection/I_Beam" to="." method="_on_I_Beam_gui_input"]
+[connection signal="mouse_entered" from="HBoxContainer/Selection/I_Beam" to="." method="_on_I_Beam_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Selection/I_Beam" to="." method="_on_I_Beam_mouse_exited"]
+[connection signal="gui_input" from="HBoxContainer/Selection/O_Beam" to="." method="_on_O_Beam_gui_input"]
+[connection signal="mouse_entered" from="HBoxContainer/Selection/O_Beam" to="." method="_on_O_Beam_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Selection/O_Beam" to="." method="_on_O_Beam_mouse_exited"]
+
+[editable path="HBoxContainer/Selection/C_Beam"]

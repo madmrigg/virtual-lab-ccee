@@ -1,0 +1,190 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_italic.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold_italic.tres" type="DynamicFont" id=4]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_mono.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/scenes/function/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scripts/functions/rich_text_effects.gd" type="Script" id=7]
+[ext_resource path="res://src/scenes/content/modules/Module1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/scenes/function/AutoNarrator.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/scenes/content/modules/ModuleDescription.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AspectRatioContainer/VBoxContainer/NextButton:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AspectRatioContainer/VBoxContainer/NextButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "StartModule"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("AspectRatioContainer/VBoxContainer/PanelContainer/RichTextLabel")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("AspectRatioContainer/VBoxContainer/NextButton")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_anim"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AspectRatioContainer/VBoxContainer/NextButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AspectRatioContainer/VBoxContainer/NextButton:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Module" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1913.0
+margin_bottom = 1073.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer"]
+margin_left = 420.0
+margin_right = 1486.0
+margin_bottom = 1066.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="1" type="MarginContainer" parent="AspectRatioContainer/VBoxContainer"]
+margin_right = 1066.0
+margin_bottom = 352.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="AspectRatioContainer/VBoxContainer"]
+visible = false
+margin_top = 241.0
+margin_right = 1066.0
+margin_bottom = 286.0
+custom_fonts/font = ExtResource( 1 )
+text = "The Virtual Lab is divided into modules."
+
+[node name="PanelContainer" type="PanelContainer" parent="AspectRatioContainer/VBoxContainer"]
+margin_top = 356.0
+margin_right = 1066.0
+margin_bottom = 709.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/VBoxContainer/PanelContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1059.0
+margin_bottom = 346.0
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]The Virtual Lab is divided into [color=red][url=0]Modules[/url][/color].
+
+Please use the right pane to access the entire list of [color=red][url=0]Modules[/url][/color] that have been made available for the course.[/center]
+"
+text = "The Virtual Lab is divided into Modules.
+
+Please use the right pane to access the entire list of Modules that have been made available for the course.
+"
+fit_content_height = true
+script = ExtResource( 7 )
+meta_link_res = [ ExtResource( 10 ) ]
+
+[node name="NextButton" parent="AspectRatioContainer/VBoxContainer" instance=ExtResource( 6 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 676.0
+margin_right = 1066.0
+margin_bottom = 727.0
+text = "Click here to start Module 1"
+align = 1
+target_scene = ExtResource( 8 )
+
+[node name="2" type="MarginContainer" parent="AspectRatioContainer/VBoxContainer"]
+margin_top = 713.0
+margin_right = 1066.0
+margin_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "StartModule"
+anims/RESET = SubResource( 2 )
+anims/StartModule = SubResource( 1 )
+
+[node name="AutoNarrator" parent="." instance=ExtResource( 9 )]
+text = "The contents of this course is divided into various modules, which cover the subject matter in intricate detail.
+
+Please use the on-screen buttons to navigate through the modules.
+
+If you would like to switch between modules, please select the modules from the menu on the tol-left corner of the screen."
+
+[connection signal="meta_clicked" from="AspectRatioContainer/VBoxContainer/PanelContainer/RichTextLabel" to="AspectRatioContainer/VBoxContainer/PanelContainer/RichTextLabel" method="_on_meta_clicked"]

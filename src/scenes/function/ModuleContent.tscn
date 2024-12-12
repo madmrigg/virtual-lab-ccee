@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=1]
+
+[node name="ModuleContent" type="VBoxContainer"]
+margin_right = 219.0
+margin_bottom = 161.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 219.0
+margin_bottom = 51.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer"]
+margin_right = 219.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sub module 1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_top = 55.0
+margin_right = 219.0
+margin_bottom = 106.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer2"]
+margin_right = 219.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sub module 1"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+margin_top = 110.0
+margin_right = 219.0
+margin_bottom = 161.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="MarginContainer3"]
+margin_right = 219.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 1 )
+text = "Sub module 1"

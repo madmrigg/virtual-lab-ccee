@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/pexels-yury-kim-585418.jpg-de978410f2c1f91ea73d26541a4a4c25.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/ui_elements/images/modules/pexels-yury-kim-585418.jpg"
+dest_files=[ "res://.import/pexels-yury-kim-585418.jpg-de978410f2c1f91ea73d26541a4a4c25.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

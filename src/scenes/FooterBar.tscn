@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/scripts/footer_bar.gd" type="Script" id=1]
+[ext_resource path="res://src/ui_elements/icons/restart_alt_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=2]
+[ext_resource path="res://src/ui_elements/themes/vlab_theme_light/vlab.tres" type="Theme" id=3]
+[ext_resource path="res://src/ui_elements/themes/windows_10_dark/theme.tres" type="Theme" id=4]
+[ext_resource path="res://src/ui_elements/icons/record_voice_over_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=5]
+[ext_resource path="res://src/ui_elements/icons/volume_up_FILL0_wght400_GRAD200_opsz48.png" type="Texture" id=6]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=7]
+[ext_resource path="res://src/ui_elements/icons/settings_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=8]
+[ext_resource path="res://src/ui_elements/icons/dark_mode_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=10]
+
+[node name="FooterBar" type="PanelContainer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -68.0
+size_flags_horizontal = 3
+script = ExtResource( 1 )
+dark_theme = ExtResource( 4 )
+light_theme = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1913.0
+margin_bottom = 61.0
+
+[node name="Settings" type="Button" parent="HBoxContainer"]
+margin_right = 60.0
+margin_bottom = 54.0
+hint_tooltip = "Change accessibility settings."
+icon = ExtResource( 8 )
+
+[node name="PopUp" type="WindowDialog" parent="HBoxContainer/Settings"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -46.0
+margin_top = -20.0
+margin_right = 202.0
+margin_bottom = 208.0
+custom_fonts/title_font = ExtResource( 7 )
+window_title = "Settings"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Settings/PopUp"]
+margin_right = 248.0
+margin_bottom = 228.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Settings/PopUp/VBoxContainer"]
+margin_right = 248.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Audio" type="Button" parent="HBoxContainer/Settings/PopUp/VBoxContainer/HBoxContainer"]
+margin_right = 60.0
+margin_bottom = 54.0
+hint_tooltip = "Mute or unmute audio."
+size_flags_vertical = 3
+icon = ExtResource( 6 )
+
+[node name="AppVolume" type="HSlider" parent="HBoxContainer/Settings/PopUp/VBoxContainer/HBoxContainer"]
+margin_left = 64.0
+margin_right = 248.0
+margin_bottom = 54.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -40.0
+max_value = 0.0
+step = 4.0
+rounded = true
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Narration" type="Button" parent="HBoxContainer/Settings/PopUp/VBoxContainer"]
+margin_top = 58.0
+margin_right = 248.0
+margin_bottom = 112.0
+hint_tooltip = "Enable or disable automatic narration."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Narrator"
+icon = ExtResource( 5 )
+
+[node name="UITheme" type="Button" parent="HBoxContainer/Settings/PopUp/VBoxContainer"]
+margin_top = 116.0
+margin_right = 248.0
+margin_bottom = 170.0
+hint_tooltip = "Change UI Theme between Light Mode and Dark Mode."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "UI Theme"
+icon = ExtResource( 10 )
+
+[node name="PopUp" type="AcceptDialog" parent="HBoxContainer/Settings/PopUp/VBoxContainer/UITheme"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -259.0
+margin_top = 269.0
+margin_right = -1.0
+margin_bottom = 335.0
+dialog_text = "This feature is still a work in progress!"
+
+[node name="ResetLab" type="Button" parent="HBoxContainer/Settings/PopUp/VBoxContainer"]
+margin_top = 174.0
+margin_right = 248.0
+margin_bottom = 228.0
+hint_tooltip = "Restart the Virtual Lab. This is mainly intended for errors."
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Reset"
+icon = ExtResource( 2 )
+
+[connection signal="button_up" from="HBoxContainer/Settings" to="." method="_on_Settings_button_up"]
+[connection signal="button_up" from="HBoxContainer/Settings/PopUp/VBoxContainer/HBoxContainer/Audio" to="." method="_on_Audio_button_up"]
+[connection signal="value_changed" from="HBoxContainer/Settings/PopUp/VBoxContainer/HBoxContainer/AppVolume" to="." method="_on_AppVolume_value_changed"]
+[connection signal="button_up" from="HBoxContainer/Settings/PopUp/VBoxContainer/Narration" to="." method="_on_Narration_button_up"]
+[connection signal="button_up" from="HBoxContainer/Settings/PopUp/VBoxContainer/UITheme" to="." method="_on_UITheme_button_up"]
+[connection signal="button_up" from="HBoxContainer/Settings/PopUp/VBoxContainer/ResetLab" to="." method="_on_Home_button_up"]

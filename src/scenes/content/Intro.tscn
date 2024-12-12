@@ -1,0 +1,532 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_normal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_italic.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_bold_italic.tres" type="DynamicFont" id=4]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_mono.tres" type="DynamicFont" id=5]
+[ext_resource path="res://src/scenes/content/ObjAim.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/scenes/function/Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scripts/functions/rich_text_effects.gd" type="Script" id=8]
+[ext_resource path="res://src/ui_elements/images/woman-1455991_640.png" type="Texture" id=9]
+[ext_resource path="res://src/ui_elements/icons/arrow_back_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=10]
+[ext_resource path="res://src/ui_elements/icons/arrow_forward_FILL0_wght400_GRAD0_opsz24.png" type="Texture" id=11]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-yury-kim-585418.jpg" type="Texture" id=12]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-sasha-prasastika-3780477.jpg" type="Texture" id=13]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-furkan-güneş-7461112.jpg" type="Texture" id=14]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-nicole-rathmayr-220885.jpg" type="Texture" id=15]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-igor-starkov-1117452.jpg" type="Texture" id=16]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-photoscom-93398.jpg" type="Texture" id=17]
+[ext_resource path="res://src/ui_elements/images/modules/pexels-александр-лич-8803230.jpg" type="Texture" id=18]
+[ext_resource path="res://src/scenes/content/intro/SteelDesign.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/scenes/function/AutoNarrator.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/scenes/content/intro/SteelFabrication.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/scenes/content/intro/ConstructionProcess.tscn" type="PackedScene" id=22]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 592 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BackButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MarginContainer/NextButton:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BackButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("MarginContainer/NextButton:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("BackButton:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("TextureRect:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AspectRatioContainer/VBoxContainer/GridContainer:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AspectRatioContainer/VBoxContainer/GridContainer:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "ScaleAndFadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "StartTween"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "start_tween"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AspectRatioContainer/VBoxContainer/RichTextLabel:visible")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect:rect_position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1024, 592 ), Vector2( 8, 592 ), Vector2( 0, 592 ), Vector2( 0, 592 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BackButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MarginContainer/NextButton:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BackButton:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/keys = {
+"times": PoolRealArray( 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("MarginContainer/NextButton:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath("MarginContainer/NextButton")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "play_anim"
+} ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TextureRect:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AspectRatioContainer/VBoxContainer/GridContainer:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AspectRatioContainer/VBoxContainer/GridContainer:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Introduction" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -168.0
+focus_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Intro" type="Label" parent="."]
+visible = false
+margin_top = 467.0
+margin_right = 12104.0
+margin_bottom = 512.0
+custom_fonts/font = ExtResource( 1 )
+text = "This interactive learning platform offers a comprehensive set of modules that cover various aspects of steel design, fabrication, and construction processes. "
+
+[node name="Backup" type="Label" parent="Intro"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Through theoretical materials, hands-on activities, and real construction project videos, this virtual lab aims to enhance your understanding of steel design principles, practical applications, and industry standards. Explore modules such as steel connection design, ordering and receiving steel, fabrication based on shop drawings, steel element delivery, field erection of steel members, field connection with other elements, and fireproofing of steel members. By engaging with this virtual lab, you will develop essential skills and knowledge required for successful steel construction projects, while gaining a deep appreciation for safety, efficiency, and compliance."
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer"]
+margin_left = 504.0
+margin_right = 1416.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/VBoxContainer"]
+visible = false
+margin_right = 912.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = ExtResource( 5 )
+custom_fonts/bold_italics_font = ExtResource( 4 )
+custom_fonts/italics_font = ExtResource( 3 )
+custom_fonts/bold_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "
+[center]This interactive learning platform covers:
+
+[color=red][url=0]Steel Design[/url][/color]
+[color=blue][url=1]Steel Fabrication[/url][/color]
+[color=green][url=2]Construction Processes[/url][/color]
+
+Explore the modules for relevant topics.[/center]
+"
+text = "
+This interactive learning platform covers:
+
+Steel Design
+Steel Fabrication
+Construction Processes
+
+Explore the modules for relevant topics.
+"
+fit_content_height = true
+script = ExtResource( 8 )
+meta_link_res = [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ) ]
+
+[node name="GridContainer" type="GridContainer" parent="AspectRatioContainer/VBoxContainer"]
+margin_right = 912.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect1" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_right = 225.0
+margin_bottom = 454.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 13 )
+expand = true
+
+[node name="TextureRect2" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_left = 229.0
+margin_right = 454.0
+margin_bottom = 454.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 14 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_left = 458.0
+margin_right = 683.0
+margin_bottom = 454.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 18 )
+expand = true
+
+[node name="TextureRect4" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_left = 687.0
+margin_right = 912.0
+margin_bottom = 454.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 17 )
+expand = true
+
+[node name="TextureRect5" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_top = 458.0
+margin_right = 225.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 15 )
+expand = true
+
+[node name="TextureRect6" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_left = 229.0
+margin_top = 458.0
+margin_right = 454.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 16 )
+expand = true
+
+[node name="TextureRect7" type="TextureRect" parent="AspectRatioContainer/VBoxContainer/GridContainer"]
+margin_left = 458.0
+margin_top = 458.0
+margin_right = 683.0
+margin_bottom = 912.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 12 )
+expand = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+margin_top = 592.0
+margin_right = 1732.0
+margin_bottom = 1572.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "StartTween"
+anims/RESET = SubResource( 1 )
+anims/ScaleAndFadeIn = SubResource( 2 )
+anims/StartTween = SubResource( 3 )
+
+[node name="BackButton" parent="." instance=ExtResource( 7 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 141.0
+margin_bottom = 83.0
+text = "Back"
+icon = ExtResource( 10 )
+icon_align = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -172.0
+margin_top = -115.0
+custom_constants/margin_right = 32
+custom_constants/margin_top = 32
+custom_constants/margin_left = 32
+custom_constants/margin_bottom = 32
+
+[node name="NextButton" parent="MarginContainer" instance=ExtResource( 7 )]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 140.0
+margin_bottom = 83.0
+text = "Next"
+icon = ExtResource( 11 )
+target_scene = ExtResource( 6 )
+
+[node name="AutoNarrator" parent="." instance=ExtResource( 20 )]
+text = "This interactive learning platform offers a comprehensive set of \"modules\" that cover various aspects of steel design, fabrication, and construction processes. Click on the \"next\" button to continue."
+
+[connection signal="meta_clicked" from="AspectRatioContainer/VBoxContainer/RichTextLabel" to="AspectRatioContainer/VBoxContainer/RichTextLabel" method="_on_meta_clicked"]

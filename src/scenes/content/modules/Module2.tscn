@@ -1,0 +1,116 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module2" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Enable students to understand the process of ordering and receiving steel from mills for construction projects, providing an understanding of construction industry practices."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Understanding the process of ordering steel from mills and service centers
+
+The process of ordering steel for construction projects involves a systematic approach to ensure efficient procurement. It encompasses the following steps:
+
+a.	Bid Packages and Evaluation: In the initial phase, general contractors (GCs) are selected by owners to undertake construction projects. GCs then release bid packages to subcontractors, including steel fabricators, who prepare bids and submit them to the GC for evaluation.
+
+b.	Preparation of Shop Drawings: Upon being awarded a steel contract, fabricators proceed to create detailed shop drawings that specify the precise sizes and quantities of steel beams and columns required for the project.
+
+c.	Material Procurement: Steel fabricators have two options when it comes to purchasing steel: mills and service centers. Procuring steel directly from mills necessitates a careful analysis of various factors such as minimum order limits, proximity to the mill, transportation logistics, rolling schedules, project schedule, and financial resources. Alternatively, fabricators can choose to source steel from service centers, which offer advantages in terms of inventory, location, handling capabilities, staging, processing, delivery services, and financial resources.
+
+d.	Placing an Order: Once the fabricator has determined the specific steel requirements, an order is placed with the selected supplier. This entails specifying the desired sizes, quantities, delivery schedule, and any additional processing or value-added services required for the steel materials.
+
+Identifying steel specifications and requirements
+
+Accurate identification of steel specifications and requirements is paramount in steel procurement. Fabricators must diligently assess the project's design and structural needs. This involves determining the type of steel (e.g., HSS, W shapes, angle, channel, plate), required sizes, grades, and any specific quality or performance criteria stipulated by the project.
+
+Estimating steel quantities and selecting appropriate sizes
+
+Based on the detailed shop drawings, fabricators meticulously estimate the quantities of steel required for the project. This estimation process entails analyzing the structural design, comprehending the load requirements, and considering factors such as beam spans, column heights, and connection details. Subsequently, fabricators select the appropriate sizes of steel beams and columns that conform to the design specifications while ensuring structural integrity.
+
+Process of placing an order with a steel mill and service center
+
+a.	Mill Purchases: Ordering directly from a mill necessitates careful consideration of several factors. Fabricators must evaluate minimum order quantities, transportation logistics, rolling schedules, distance from the mill, and financial resources. For smaller projects, purchasing directly from mills may not be justified due to minimum order requirements and other logistical constraints. However, for larger projects with extended lead times and sufficient resources, mill purchases may be feasible.
+
+b.	Steel Service Center Purchases: Steel service centers offer distinct advantages in the procurement process. These centers maintain readily available inventory, encompass a wide range of steel products, boast convenient locations, and excel in efficient handling, staging, processing, and delivery. Moreover, fabricators can purchase steel in smaller quantities, access value-added services such as cutting, cambering, and marking, and benefit from the financial and risk management strategies offered by service centers.
+
+Tracking and managing the delivery schedule
+
+To ensure the smooth progression of fabrication and construction activities, fabricators must diligently track and manage the delivery schedule of steel materials. This entails close coordination with the supplier, careful consideration of project timelines, and prompt adjustments to schedules in the event of changes or delays. Effective communication and proactive management are crucial for the successful and timely delivery of steel materials.
+
+Receiving and inspecting steel materials i/c documentation and receipt
+
+Upon receipt of steel materials, fabricators undertake thorough inspections to ensure compliance with specified requirements and quality standards. This comprehensive inspection process includes verifying dimensional accuracy, assessing the material's condition, and checking for appropriate documentation. Fabricators meticulously document the receipt of steel materials, ensuring that accurate records are maintained for quality control and project management purposes.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+visible = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 470.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 474.0
+margin_right = 989.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 515.0
+margin_bottom = 292.0
+
+[node name="Label" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1/Panel" index="0"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 296.0
+margin_right = 515.0
+margin_bottom = 588.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/6CFDIBILmZ8"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 592.0
+margin_right = 515.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/Uc48Q-zdAtc"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+margin_left = 835.0
+margin_right = 1147.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList2" index="0"]
+margin_right = 312.0
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 993.0

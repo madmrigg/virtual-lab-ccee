@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/ui_elements/icons/record_voice_over_FILL0_wght400_GRAD0_opsz48.png" type="Texture" id=1]
+[ext_resource path="res://src/scripts/functions/text_to_speech_button.gd" type="Script" id=2]
+[ext_resource path="res://src/ui_elements/fonts/Open_Sans/open_sans_extra_bold.tres" type="DynamicFont" id=3]
+
+[node name="TextToSpeechButton" type="Button"]
+margin_right = 88.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 3 )
+icon = ExtResource( 1 )
+icon_align = 1
+script = ExtResource( 2 )
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

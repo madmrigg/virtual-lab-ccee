@@ -1,0 +1,115 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/scenes/function/WebLinkOpener.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/scenes/ModuleRoot.tscn" type="PackedScene" id=2]
+
+[node name="Module7" instance=ExtResource( 2 )]
+
+[node name="AIm" parent="Aim" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Enhance students' understanding of the importance of fireproofing steel structures and provide exposure to industry practices related to fire protection measures, including the selection, application, and evaluation of fireproofing materials and methods as practiced in the construction industry."
+
+[node name="Theory" parent="Theory" index="0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Importance of fireproofing steel structures
+
+Fireproofing steel structures plays a critical role in enhancing the safety of occupants and preventing structural collapse during fire events. It is a well-established fact that steel loses approximately 50% of its load-bearing capacity when exposed to temperatures around 1,000 F. This point is the failure point in fire resistance rating tests such as ASTM E119. Therefore, it is imperative to protect structural steel buildings and industrial plants with human occupants from fire events, allowing sufficient time for rescuers to evacuate structures safely.
+
+Fireproofing can be classified into two categories: active and passive fire protection. Active fireproofing primarily involves the use of sprinkler systems, gases, or other automated means to extinguish fires. On the other hand, passive fire protection encompasses the application of sacrificial layers to the surface of steel elements. This passive approach provides crucial time for extinguishing the fire or evacuating occupants before any structural failure occurs.
+
+Types of fire protection materials and methods
+
+a.	Active Fireproofing: Active fireproofing methods include systems such as sprinklers, gases, or automatic extinguishing mechanisms that actively suppress and extinguish fires. These methods are designed to actively combat the fire and prevent its spread.
+
+b.	Passive Fire Protection: Passive fire protection involves the application of sacrificial layers to steel surfaces, which provide insulation and delay the effects of fire. This delay allows occupants to safely evacuate the building or extinguish the fire before structural collapse. Passive fire protection measures are essential in maintaining the structural integrity of steel elements during a fire event.
+
+Evaluating fire protection requirements and regulations
+
+Fire protection requirements and regulations are contingent upon jurisdiction and are typically based on recognized model codes such as the International Code Council (ICC)/International Building Code (IBC), National Fire Protection Association (NFPA). Structural components or fireproofing systems are evaluated based on their fire resistance ratings, which are expressed in terms of hours. These ratings are determined through standardized tests, such as ASTM E119, (ANSI)UL263, or UL1709.
+
+Fireproofing applications
+
+In order to meet passive structural steel fireproofing requirements, there are a number of methods available. The most common are:
+
+a.	Spray-Applied Fire-Resistive Material (SFRM): SFRM is the most common fireproofing method in the US. It involves applying cement and gypsum-based materials, often with additives like mineral wool or vermiculite, as wet or dry spray or troweled layers. SFRMs provide fire protection and additional benefits such as acoustical or thermal insulation.
+
+b.	Intumescent Coatings: Thin epoxy-based coatings that expand when exposed to heat, forming a protective barrier on steel surfaces. Intumescent coatings are lightweight and suitable for exposed steel applications without compromising the design.
+
+c.	Rigid Board Fireproofing: Involves installing fire-resistive boards on beams, columns, and decking. It is suitable for various environments, including freezing conditions, but can be more expensive and time-consuming compared to other methods.
+
+d.	Flexible Blanket Systems: Lightweight and versatile, these systems provide combined fire, thermal, and acoustic insulation. They are easily installed even on complex shapes, minimize toxic smoke generation, but offer limited customization options. Additional protection measures may be needed for corrosion inhibition.
+
+e.	Portland Concrete: Once commonly used, Portland concrete is now primarily used to encase large steel areas like columns. However, it requires more space, has a high carbon footprint, limited design-friendliness, and lacks independent corrosion inhibition, necessitating additional protection measures.
+
+Assessing the effectiveness of fireproofing measures
+
+The effectiveness of fireproofing measures is evaluated based on their ability to withstand fire events and meet the required fire resistance ratings. Factors considered in the assessment include heat resistance, corrosion inhibition, impact resistance, and environmental durability. Various standardized tests, such as ASTM E119, (ANSI)UL263, or UL1709 are used to determine the performance of fireproofing materials.
+"
+
+[node name="RelatedVideos" parent="." index="3"]
+visible = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+drag_to_rearrange_enabled = true
+
+[node name="VideoPanel" parent="RelatedVideos" index="0"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LeftMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="0"]
+margin_right = 468.0
+
+[node name="YTList1" parent="RelatedVideos/VideoPanel/HBoxContainer" index="1"]
+margin_left = 472.0
+margin_right = 991.0
+
+[node name="Panel" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="0"]
+margin_right = 519.0
+margin_bottom = 173.0
+
+[node name="WebLinkOpener" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="1" instance=ExtResource( 1 )]
+margin_top = 177.0
+margin_right = 519.0
+margin_bottom = 351.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/ttFo0GxbPbM"
+
+[node name="WebLinkOpener2" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="2" instance=ExtResource( 1 )]
+margin_top = 355.0
+margin_right = 519.0
+margin_bottom = 529.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/vgdpQUB4-Is"
+
+[node name="WebLinkOpener3" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="3" instance=ExtResource( 1 )]
+margin_top = 533.0
+margin_right = 519.0
+margin_bottom = 707.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/O52uiF6F12U"
+
+[node name="WebLinkOpener4" parent="RelatedVideos/VideoPanel/HBoxContainer/YTList1" index="4" instance=ExtResource( 1 )]
+margin_top = 711.0
+margin_right = 519.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "https://youtu.be/236l1kApEeA"
+
+[node name="YTList2" parent="RelatedVideos/VideoPanel/HBoxContainer" index="2"]
+visible = false
+
+[node name="RightMargin" parent="RelatedVideos/VideoPanel/HBoxContainer" index="3"]
+margin_left = 995.0

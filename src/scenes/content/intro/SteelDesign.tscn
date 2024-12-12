@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/function/AnimatedPopUp.tscn" type="PackedScene" id=1]
+
+[node name="SteelDesign" instance=ExtResource( 1 )]
+margin_right = 24.0
+margin_bottom = -118.0
+
+[node name="AnimatedRTLabel" parent="." index="1"]
+margin_left = -488.0
+margin_top = -207.0
+margin_right = 488.0
+margin_bottom = 207.0
+bbcode_enabled = true
+bbcode_text = "[center]Steel Design, or more specifically, Structural Steel Design, is an area of structural engineering used to design steel structures.
+
+These structures include schools, houses, bridges, commercial centers, tall buildings, warehouses, aircraft, ships and stadiums.
+
+The design and use of steel frames are commonly employed in the design of steel structures. More advanced structures include steel plates and shells.[/center]"
+text = "Steel Design, or more specifically, Structural Steel Design, is an area of structural engineering used to design steel structures.
+
+These structures include schools, houses, bridges, commercial centers, tall buildings, warehouses, aircraft, ships and stadiums.
+
+The design and use of steel frames are commonly employed in the design of steel structures. More advanced structures include steel plates and shells."
+
+[node name="AutoNarrator" parent="." index="2"]
+margin_right = 980.0
+margin_bottom = 418.0
+text = "Steel Design, or more specifically, Structural Steel Design, is an area of structural engineering used to design steel structures.
+
+These structures include schools, houses, bridges, commercial centers, tall buildings, warehouses, aircraft, ships and stadiums.
+
+The design and use of steel frames are commonly employed in the design of steel structures. More advanced structures include steel plates and shells. "

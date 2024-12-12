@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/scenes/function/AnimatedPopUp.tscn" type="PackedScene" id=1]
+
+[node name="SteelDesign" instance=ExtResource( 1 )]
+visible = false
+margin_right = 24.0
+margin_bottom = -256.0
+
+[node name="AnimatedRTLabel" parent="." index="1"]
+margin_left = -1162.5
+margin_top = -138.0
+margin_right = 1162.5
+margin_bottom = 138.0
+bbcode_enabled = true
+bbcode_text = "[center]Designing steel beams involves considering different limit states, including strength, serviceability, and stability. Strength limit states ensure that the beam can resist applied loads without failure. Serviceability limit states focus on criteria like deflection, vibration, and durability to ensure satisfactory performance under service conditions. Stability considerations prevent buckling or lateral-torsional instability.[/center]"
+text = "Designing steel beams involves considering different limit states, including strength, serviceability, and stability. Strength limit states ensure that the beam can resist applied loads without failure. Serviceability limit states focus on criteria like deflection, vibration, and durability to ensure satisfactory performance under service conditions. Stability considerations prevent buckling or lateral-torsional instability."
+
+[node name="AutoNarrator" parent="." index="2"]
+margin_right = 2329.0
+margin_bottom = 280.0
+text = "Designing steel beams involves considering different limit states, including strength, serviceability, and stability. Strength limit states ensure that the beam can resist applied loads without failure. Serviceability limit states focus on criteria like deflection, vibration, and durability to ensure satisfactory performance under service conditions. Stability considerations prevent buckling or lateral-torsional instability."
